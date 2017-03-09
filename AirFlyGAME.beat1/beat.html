@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body{
+				background-color: black;
+				position: relative;
+				width: 1350px;
+				height: 650px;
+				overflow: hidden;
+			}
+			#player1{
+				width: 30px;
+				height: 30px;
+				position:absolute;
+				
+				font-size: 30px;
+				line-height: 30px;
+				background-color: ghostwhite;
+			}
+			#player2{
+				width: 30px;
+				height: 30px;
+				position:absolute;
+				right: 45px;
+				font-size: 30px;
+				line-height: 30px;
+				background-color: crimson;
+			}
+			#p1hpcao{
+				width: 42%;
+				height: 30px;
+				position:absolute;
+				left: 20px;
+				top: 20px;
+				border: 4px solid darkmagenta;
+				border-radius:5px ;
+			}
+			#p2hpcao{
+				width: 42%;
+				height: 30px;
+				position:absolute;
+				right: 20px;
+				top: 20px;
+				border: 4px solid darkslateblue;
+				border-radius:5px ;
+			}
+			.p1hpge{
+				width: 8%;
+			    height: 26px;
+			    background: #720002;
+			    float: left;
+			    margin: 2px 5px;
+			    border-radius: 3px;
+			}
+			.p2hpge{
+				width: 8%;
+			    height: 26px;
+			    background: #720002;
+			    float: right;
+			    margin: 2px 5px;
+			    border-radius: 3px;
+			}
+			#vs{
+				width: 6%;
+				height: 100px;
+				position: absolute;
+				right: 50%;
+				color: red;
+				font-size: 100px;
+				font-family: "微软雅黑";
+				font-weight: bold;			
+				font-style: oblique;
+				}
+				.p1A{
+					width: 20px;
+					height: 10px;
+					background: orangered;
+					border-radius: 0 5px 5px 0;
+					position: absolute;
+				}
+				.p2A{
+					width: 20px;
+					height: 10px;
+					background: orangered;
+					border-radius:5px 0 0 5px;
+					position: absolute;
+				}
+				.p1shexian{
+					height: 2px;
+					background-color: deepskyblue;
+					position: absolute;
+				}
+				.p2shexian{
+					height: 2px;
+					background-color: magenta;
+					position: absolute;
+				}
+				.p1fang{
+					border: 3px;
+					border-style:solid ;
+					border-color: lawngreen lightblue lightcoral yellow; 
+					position: absolute;
+				}
+				.p2fang{
+					border: 3px;
+					border-style:solid ;
+					border-color: lawngreen lightblue lightcoral yellow; 
+					position: absolute;
+				}
+				#P1SCD{
+					position: absolute;
+				    top: 80px;
+				    left: 30px;
+				    line-height: 28px;
+				    width: 265px;
+				    border-radius: 0 10px 9px 0;
+				    background-color: hotpink;
+				    color: white;
+				    font-family: "微软雅黑";
+				    font-weight: bold;
+				    font-style: oblique;
+				}
+				#P2SCD{
+					position: absolute;
+				    top: 80px;
+				    right: 30px;
+				    line-height: 28px;
+				    width: 265px;
+				    text-align: -webkit-right;
+    				padding-right: 4px;
+				    border-radius: 10px 0px 0px 9px;
+				    background-color: gold;
+				    color: white;
+				    font-family: "微软雅黑";
+				    font-weight: bold;
+				    font-style: oblique;
+				}
+		</style>
+	</head>
+	<body>
+		<div id="p1hpcao">
+			
+		</div>
+		<div id="vs">
+			VS
+		</div>
+		<div id="p2hpcao">
+			
+		</div>
+		<span id="P1SCD">
+			技能充能完毕！！！可释放毁灭光线
+		</span>
+		<span id="P2SCD">
+			技能充能完毕！！！可释放毁灭光线
+		</span>
+		<div id="player1">
+			>>
+		</div>
+		<div id="player2">
+			<<
+		</div>
+		<audio src="Janji - Horizon~1.mp3" autoplay="autoplay" loop></audio>
+	</body>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//角色，角色初始坐标定义，按键方向开关定义，角色坐标轴定义
+		var player1=document.getElementById("player1");
+		var player2=document.getElementById("player2");
+		var mapa=document.getElementsByTagName("body")[0];
+		player1.style.top="330px";
+		player1.style.left="45px";
+		player2.style.top="330px";
+		player2.style.left="1280px";
+		var p1hps=10;
+		var p2hps=10;
+		var p1up=false;
+		var p1down=false;
+		var p1rigth=false;
+		var p1left=false;
+		var p2up=false;
+		var p2down=false;
+		var p2right=false;
+		var p2left=false;
+		var player1y=parseInt(player1.style.top);
+		var player1x=parseInt(player1.style.left);
+		var player2y=parseInt(player2.style.top);
+		var player2x=parseInt(player2.style.left);
+		//射击开关
+		var p1atip=true;
+		var p1stip=true;
+		var p1scd=5;
+		var p1fcd=8;
+		var p2atip=true;
+		var p2stip=true;
+		var p2scd=5;
+		var p2fcd=8;
+		//防护罩定义；
+		//创建初始血量
+		var p1hpcao=document.getElementById("p1hpcao");
+		var p2hpcao=document.getElementById("p2hpcao");
+		function hp(){
+			for(p1hp=0;p1hp<p1hps;p1hp++){
+				var p1hpge=document.createElement("div");
+				p1hpge.className="p1hpge";
+				p1hpcao.appendChild(p1hpge);
+			};
+			for(p2hp=0;p2hp<p2hps;p2hp++){
+				var p2hpge=document.createElement("div");
+				p2hpge.className="p2hpge";
+				p2hpcao.appendChild(p2hpge);
+			}
+		}
+		hp();
+		//按下键盘打开方向，射击开关
+		onkeydown=function()
+		{
+			//P1方向开关打开
+				if(event.keyCode==87){
+					p1up=true;
+				};
+				if(event.keyCode==83){
+					p1down=true;
+				};
+				if(event.keyCode==65){
+					p1left=true;
+				};
+				if(event.keyCode==68){
+					p1rigth=true;
+				};
+			//P2方向开关打开
+				if(event.keyCode==38){
+					p2up=true;
+				};
+				if(event.keyCode==40){
+					p2down=true;
+				};
+				if(event.keyCode==37){
+					p2left=true;
+				};
+				if(event.keyCode==39){
+					p2right=true;
+				};
+				if(event.keyCode==70){
+					if(p1atip==true){
+						p1gun();
+						var danyin=document.createElement("audio");
+						danyin.autoplay="autoplay";
+						danyin.src="zidan.mp3";
+						mapa.appendChild(danyin);
+						p1atip=false;
+						setTimeout("p1atip=true",200);
+					}
+				}
+				if(event.keyCode==191){
+					if(p2atip==true){
+						p2gun();
+						var danyin=document.createElement("audio");
+						danyin.autoplay="autoplay";
+						danyin.src="zidan.mp3"
+						mapa.appendChild(danyin);
+						p2atip=false;
+						setTimeout("p2atip=true",200);
+					}
+				}
+				if(event.keyCode==71){
+					if(p1stip==true){
+						p1guang();
+						var guangyin=document.createElement("audio");
+						guangyin.src="shexian.mp3"
+						guangyin.autoplay="autoplay";
+						mapa.appendChild(guangyin);
+						p1stip=false;
+						var p1cd1= setInterval(function(){
+							p1scd--;
+							if(p1scd==0){
+								document.getElementById("P1SCD").style.background="hotpink";
+								document.getElementById("P1SCD").innerHTML="技能充能完毕！！！可释放毁灭光线";
+								p1scd=5;
+								clearInterval(p1cd1);
+							}else{
+								document.getElementById("P1SCD").style.background="red";
+								document.getElementById("P1SCD").innerHTML="技能毁灭光线充能中，还剩"+p1scd+"s时间";
+							}
+						},1000)
+						setTimeout("p1stip=true",5000);
+					}
+				}
+				if(event.keyCode==190){
+					if(p2stip==true){
+						p2guang();
+						var guangyin=document.createElement("audio");
+						guangyin.src="shexian.mp3"
+						guangyin.autoplay="autoplay";
+						mapa.appendChild(guangyin);
+						p2stip=false;
+						var p2cd1= setInterval(function(){
+							p2scd--;
+							if(p2scd==0){
+								document.getElementById("P2SCD").style.background="gold";
+								document.getElementById("P2SCD").innerHTML="技能充能完毕！！！可释放毁灭光线";
+								p2scd=5;
+								clearInterval(p2cd1);
+							}else{
+								document.getElementById("P2SCD").style.background="red";
+								document.getElementById("P2SCD").innerHTML="技能毁灭光线充能中，还剩"+p2scd+"s时间";
+							}
+						},1000)
+						setTimeout("p2stip=true",5000);
+					}
+				};
+				if(event.keyCode==72){
+					p1fang();
+				};
+				if(event.keyCode==188){
+					p2fang();
+				}
+		}
+		//松开键盘关闭方向，射击开关
+		onkeyup=function(){
+			//P1方向开关关闭
+			if(event.keyCode==87){
+					p1up=false;
+			};
+			if(event.keyCode==83){
+					p1down=false;
+			};
+			if(event.keyCode==65){
+					p1left=false;
+			};
+			if(event.keyCode==68){
+					p1rigth=false;
+			};
+			//P2方向开关关闭
+			if(event.keyCode==38){
+					p2up=false;
+			};
+			if(event.keyCode==40){
+					p2down=false;
+			};
+			if(event.keyCode==37){
+					p2left=false;
+			};
+			if(event.keyCode==39){
+					p2right=false;
+			};
+		}
+		//判断按键开关状态移动角色
+		function move(){
+			if(p1up==true){
+				player1y-=2;
+				if(player1y<=0){
+					player1y=0;
+				};
+				if(player1y>=580){
+					player1y=580;
+				};
+				player1.style.top=player1y+"px";
+			};
+			if(p1down==true){
+				player1y+=2;
+				if(player1y<=0){
+					player1y=0;
+				};
+				if(player1y>=580){
+					player1y=580;
+				};
+				player1.style.top=player1y+"px";
+			};
+			if(p1left==true){
+				player1x-=2;
+				if(player1x<=0){
+					player1x=0;
+				};
+				if(player1x>=1320){
+					player1x=1320;
+				};
+				player1.style.left=player1x+"px";
+			};
+			if(p1rigth==true){
+				player1x+=2;
+				if(player1x<=0){
+					player1x=0;
+				};
+				if(player1x>=1320){
+					player1x=1320;
+				};
+				player1.style.left=player1x+"px";
+			}
+			if(p2up==true){
+				player2y-=2;
+				if(player2y<=0){
+					player2y=0;
+				};
+				if(player2y>=580){
+					player2y=580;
+				};
+				player2.style.top=player2y+"px";
+			}
+			if(p2down==true){
+				player2y+=2;
+				if(player2y<=0){
+					player2y=0;
+				};
+				if(player2y>=580){
+					player2y=580;
+				};
+				player2.style.top=player2y+"px";
+			};
+			if(p2left==true){
+				player2x-=2;
+				if(player2x<=0){
+					player2x=0;
+				};
+				if(player2x>=1320){
+					player2x=1320;
+				};
+				player2.style.left=player2x+"px";
+			};
+			if(p2right==true){
+				player2x+=2;
+				if(player2x<=0){
+					player2x=0;
+				};
+				if(player2x>=1320){
+					player2x=1320;
+				};
+				player2.style.left=player2x+"px";
+			};
+			p1Afly();
+			p2Afly();
+			p1sfly();
+			p2sfly();
+			p1Apeng();
+			p2Apeng();
+			p1speng();
+			p2speng()
+			phpjs();
+		}	
+		var JT=setInterval("move()",1);
+		//创建子弹
+		function p1gun(){
+			var p1gs=document.createElement("div");
+			p1gs.className="p1A";
+			p1gs.style.top=(player1y+12)+"px";
+			p1gs.style.left=(player1x+30)+"px";
+			mapa.appendChild(p1gs);
+		};
+		function p2gun(){
+			var p2gs=document.createElement("div");
+			p2gs.className="p2A";
+			p2gs.style.top=(player2y+12)+"px";
+			p2gs.style.left=(player2x-20)+"px";
+			mapa.appendChild(p2gs);
+		};
+		//创建射线
+		function p1guang(){
+			var p1sheA=document.createElement("div");
+			var p1sheB=document.createElement("div");
+			p1sheA.className="p1shexian";
+			p1sheB.className="p1shexian";
+			p1sheA.style.width="0px";
+			p1sheB.style.width="0px";
+			p1sheA.style.top=(player1y-5)+"px";
+			p1sheB.style.top=(player1y+35)+"px";
+			p1sheA.style.left=(player1x+25)+"px";
+			p1sheB.style.left=(player1x+25)+"px";
+			mapa.appendChild(p1sheA);
+			mapa.appendChild(p1sheB);
+		};
+		function p2guang(){
+			var p2sheA=document.createElement("div");
+			var p2sheB=document.createElement("div");
+			p2sheA.className="p2shexian";
+			p2sheB.className="p2shexian";
+			p2sheA.style.width="0px";
+			p2sheB.style.width="0px";
+			p2sheA.style.top=(player2y-5)+"px";
+			p2sheB.style.top=(player2y+35)+"px";
+			p2sheA.style.right=(1345-player2x)+"px";
+			p2sheB.style.right=(1345-player2x)+"px";
+			mapa.appendChild(p2sheA);
+			mapa.appendChild(p2sheB);
+		};
+		//创建防护罩
+		function p1fang(){
+			var p1fh=document.createElement("div");
+			p1fh.className="p1fang";
+			p1fh.style.top=(player1y-12)+"px";
+			p1fh.style.left=(player1x-12)+"px";
+			p1fh.style.width="50px";
+			p1fh.style.height="50px";
+			mapa.appendChild(p1fh);
+		};
+		function p2fang(){
+			var p2fh=document.createElement("div");
+			p2fh.className="p2fang";
+			p2fh.style.top=(player2y-13)+"px";
+			p2fh.style.left=(player2x-13)+"px";
+			p2fh.style.width="50px";
+			p2fh.style.height="50px";
+			mapa.appendChild(p2fh);
+		};
+		//子弹飞行
+		function p1Afly(){
+			var p1gs=document.getElementsByClassName("p1A");
+			for(p1As=0;p1As<p1gs.length;p1As++){
+				var p1Aguiji=parseInt(p1gs[p1As].style.left);
+				p1Aguiji+=3;
+				p1gs[p1As].style.left=p1Aguiji+"px";
+				if(p1Aguiji>1330){
+					p1gs[p1As].remove();
+				}
+			}
+		}
+		function p2Afly(){
+			var p2gs=document.getElementsByClassName("p2A");
+			for(p2As=0;p2As<p2gs.length;p2As++){
+				var p2Aguiji=parseInt(p2gs[p2As].style.left);
+				p2Aguiji-=3;
+				p2gs[p2As].style.left=p2Aguiji+"px";
+				if(p2Aguiji<0){
+					p2gs[p2As].remove();
+				}
+			}
+		}
+		//射线增长
+		function p1sfly(){
+			var p1s=document.getElementsByClassName("p1shexian");
+			for(p1ss=0;p1ss<p1s.length;p1ss++){
+				var p1sw=parseInt(p1s[p1ss].style.width);
+				p1sw+=30;
+				p1s[p1ss].style.width=p1sw+"px";
+				p1s[p1ss].style.left=(player1x+25)+"px";
+				if(p1ss==0){
+					p1s[p1ss].style.top=(player1y-5)+"px";
+				}else if(p1ss==1){
+					p1s[p1ss].style.top=(player1y+35)+"px";
+				};
+				if(p1sw>2800){
+					p1s[p1ss].remove();
+				}
+			}
+		}
+		function p2sfly(){
+			var p2s=document.getElementsByClassName("p2shexian");
+			for(p2ss=0;p2ss<p2s.length;p2ss++){
+				var p2sw=parseInt(p2s[p2ss].style.width);
+				p2sw+=30;
+				p2s[p2ss].style.width=p2sw+"px";
+				p2s[p2ss].style.right=(1345-player2x)+"px";
+				if(p2ss==0){
+					p2s[p2ss].style.top=(player2y-5)+"px";
+				}else if(p2ss==1){
+					p2s[p2ss].style.top=(player2y+35)+"px";
+				};
+				if(p2sw>2800){
+					p2s[p2ss].remove();
+				}
+			}
+		}
+		//防护罩旋转
+//		function p1ffly(){
+//			var p1f=document.getElementsByClassName("p1fang")[0];
+//			
+//		}
+		//P1平A子弹碰撞
+		function p1Apeng(){
+			var p1gAp=document.getElementsByClassName("p1A");
+			for(p1Ap=0;p1Ap<p1gAp.length;p1Ap++){
+				p1apx1=parseInt(p1gAp[p1Ap].style.left);
+				p1apx2=parseInt(p1gAp[p1Ap].style.left)+parseInt(p1gAp[p1Ap].offsetWidth);
+				p1apy1=parseInt(p1gAp[p1Ap].style.top);
+				p1apy2=parseInt(p1gAp[p1Ap].style.top)+parseInt(p1gAp[p1Ap].offsetHeight);
+				player2x1=parseInt(player2.style.left);
+				player2x2=parseInt(player2.style.left)+parseInt(player2.offsetWidth);
+				player2y1=parseInt(player2.style.top);
+				player2y2=parseInt(player2.style.top)+parseInt(player2.offsetHeight);
+				if(p1apx1<=player2x2&&p1apx1>=player2x1&&p1apy1>=player2y1&&p1apy1<=player2y2){
+					var am=document.createElement("audio");
+					am.src="Amingzhong.mp3";
+					am.autoplay="autoplay";
+					mapa.appendChild(am);
+					p2hps-=1;
+					p1gAp[p1Ap].remove();
+					console.log("命中");
+					continue;
+				};
+				if(p1apx2<=player2x2&&p1apx2>=player2x1&&p1apy1>=player2y1&&p1apy1<=player2y2){
+					var am=document.createElement("audio");
+					am.src="Amingzhong.mp3";
+					am.autoplay="autoplay";
+					mapa.appendChild(am);
+					p2hps-=1;
+					p1gAp[p1Ap].remove();
+					console.log("命中");
+					continue;
+				};
+				if(p1apx2<=player2x2&&p1apx2>=player2x1&&p1apy1>=player2y1&&p1apy1<=player2y2){
+					var am=document.createElement("audio");
+					am.src="Amingzhong.mp3";
+					am.autoplay="autoplay";
+					mapa.appendChild(am);
+					p2hps-=1;
+					p1gAp[p1Ap].remove();
+					console.log("命中");
+					continue;
+				};
+				if(p1apx2<=player2x2&&p1apx2>=player2x1&&p1apy2>=player2y1&&p1apy2<=player2y2){
+					var am=document.createElement("audio");
+					am.src="Amingzhong.mp3";
+					am.autoplay="autoplay";
+					mapa.appendChild(am);
+					p2hps-=1;
+					p1gAp[p1Ap].remove();
+					console.log("命中");
+					continue;
+				};
+			}
+		}
+		//P2平A子弹碰撞
+		function p2Apeng(){
+			var p2gAp=document.getElementsByClassName("p2A");
+			for(p2Ap=0;p2Ap<p2gAp.length;p2Ap++){
+				p2apx1=parseInt(p2gAp[p2Ap].style.left);
+				p2apx2=parseInt(p2gAp[p2Ap].style.left)+parseInt(p2gAp[p2Ap].offsetWidth);
+				p2apy1=parseInt(p2gAp[p2Ap].style.top);
+				p2apy2=parseInt(p2gAp[p2Ap].style.top)+parseInt(p2gAp[p2Ap].offsetHeight);
+				player1x1=parseInt(player1.style.left);
+				player1x2=parseInt(player1.style.left)+parseInt(player1.offsetWidth);
+				player1y1=parseInt(player1.style.top);
+				player1y2=parseInt(player1.style.top)+parseInt(player1.offsetHeight);
+				if(p2apx1<=player1x2&&p2apx1>=player1x1&&p2apy1>=player1y1&&p2apy1<=player1y2){
+					var am=document.createElement("audio");
+					am.src="Amingzhong.mp3";
+					am.autoplay="autoplay";
+					mapa.appendChild(am);
+					p1hps-=1;
+					p2gAp[p2Ap].remove();
+					console.log("命中");
+					continue;
+				};
+				if(p2apx2<=player1x2&&p2apx2>=player1x1&&p2apy1>=player1y1&&p2apy2<=player1y2){
+					var am=document.createElement("audio");
+					am.src="Amingzhong.mp3";
+					am.autoplay="autoplay";
+					mapa.appendChild(am);
+					p1hps-=1;
+					p2gAp[p2Ap].remove();
+					console.log("命中");
+					continue;
+				};
+				if(p2apx2<=player1x2&&p2apx2>=player1x1&&p2apy1>=player1y1&&p2apy1<=player1y2){
+					var am=document.createElement("audio");
+					am.src="Amingzhong.mp3";
+					am.autoplay="autoplay";
+					mapa.appendChild(am);
+					p1hps-=1;
+					p2gAp[p2Ap].remove();
+					console.log("命中");
+					continue;
+				};
+				if(p2apx2<=player1x2&&p2apx2>=player1x1&&p2apy2>=player1y1&&p2apy2<=player1y2){
+					var am=document.createElement("audio");
+					am.src="Amingzhong.mp3";
+					am.autoplay="autoplay";
+					mapa.appendChild(am);
+					p1hps-=1;
+					p2gAp[p2Ap].remove();
+					console.log("命中");
+					continue;
+				};
+			}
+		}
+		//P1毁灭光线碰撞计算
+		function p1speng(){
+			var p1gsp=document.getElementsByClassName("p1shexian");
+			for(p1sp=0;p1sp<p1gsp.length;p1sp++){
+				p1spx1=parseInt(p1gsp[p1sp].style.left);
+				p1spx2=parseInt(p1gsp[p1sp].style.left)+parseInt(p1gsp[p1sp].offsetWidth);
+				p1spy1=parseInt(p1gsp[p1sp].style.top);
+				p1spy2=parseInt(p1gsp[p1sp].style.top)+parseInt(p1gsp[p1sp].offsetHeight);
+				player2x1=parseInt(player2.style.left);
+				player2x2=parseInt(player2.style.left)+parseInt(player2.offsetWidth);
+				player2y1=parseInt(player2.style.top);
+				player2y2=parseInt(player2.style.top)+parseInt(player2.offsetHeight);
+				if(p1spx1<=player2x2&&p1spx1>=player2x1&&p1spy1>=player2y1&&p1spy1<=player2y2){
+					var sm=document.createElement("audio");
+					sm.src="sminzhong.mp3";
+					sm.autoplay="autoplay";
+					mapa.appendChild(sm);
+					p2hps-=2;
+					console.log("命中");
+					p1gsp[p1sp].style.display="none";
+					continue;
+				};
+				if(p1spx2<=player2x2&&p1spx2>=player2x1&&p1spy1>=player2y1&&p1spy1<=player2y2){
+					var sm=document.createElement("audio");
+					sm.src="sminzhong.mp3";
+					sm.autoplay="autoplay";
+					mapa.appendChild(sm);
+					p2hps-=2;
+					console.log("命中");
+					p1gsp[p1sp].style.display="none";
+					continue;
+				};
+				if(p1spx2<=player2x2&&p1spx2>=player2x1&&p1spy1>=player2y1&&p1spy1<=player2y2){
+					var sm=document.createElement("audio");
+					sm.src="sminzhong.mp3";
+					sm.autoplay="autoplay";
+					mapa.appendChild(sm);
+					p2hps-=2;
+					console.log("命中");
+					p1gsp[p1sp].style.display="none";
+					continue;
+				};
+				if(p1spx2<=player2x2&&p1spx2>=player2x1&&p1spy2>=player2y1&&p1spy2<=player2y2){
+					var sm=document.createElement("audio");
+					sm.src="sminzhong.mp3";
+					sm.autoplay="autoplay";
+					mapa.appendChild(sm);
+					p2hps-=2;
+					console.log("命中");
+					p1gsp[p1sp].style.display="none";
+					continue;
+				};
+				if(player2x1>=p1spx1&&player2x1<=p1spx2&&player2y1>=p1spy1&&player2y1<=p1spy2){
+					var sm=document.createElement("audio");
+					sm.src="sminzhong.mp3";
+					sm.autoplay="autoplay";
+					mapa.appendChild(sm);
+					p2hps-=2;
+					console.log("命中");sww
+					p1gsp[p1sp].style.display="none";
+					continue;
+				};
+				if(player2x1>=p1spx1&&player2x1<=p1spx2&&player2y2>=p1spy1&&player2y2<=p1spy2){
+					var sm=document.createElement("audio");
+					sm.src="sminzhong.mp3";
+					sm.autoplay="autoplay";
+					mapa.appendChild(sm);
+					p2hps-=2;
+					console.log("命中");
+					p1gsp[p1sp].style.display="none";
+					continue;
+				};
+			}
+		}
+		function p2speng(){
+			var p2gsp=document.getElementsByClassName("p2shexian");
+			for(p2sp=0;p2sp<p2gsp.length;p2sp++){
+				p2spx1=1350-parseInt(p2gsp[p2sp].style.right)-parseInt(p2gsp[p2sp].offsetWidth);
+				p2spx2=1350-parseInt(p2gsp[p2sp].style.right);				
+				p2spy1=parseInt(p2gsp[p2sp].style.top);
+				p2spy2=parseInt(p2gsp[p2sp].style.top)+parseInt(p2gsp[p2sp].offsetHeight);
+				player1x1=parseInt(player1.style.left);
+				player1x2=parseInt(player1.style.left)+parseInt(player1.offsetWidth);
+				player1y1=parseInt(player1.style.top);
+				player1y2=parseInt(player1.style.top)+parseInt(player1.offsetHeight);
+				if(p2spx1<=player1x2&&p2spx1>=player1x1&&p2spy1>=player1y1&&p2spy1<=player1y2){
+					var sm=document.createElement("audio");
+					sm.src="sminzhong.mp3";
+					sm.autoplay="autoplay";
+					mapa.appendChild(sm);
+					p1hps-=2;
+					console.log("命中");
+					p2gsp[p2sp].style.display="none";
+					continue;
+				};
+				if(p2spx2<=player1x2&&p2spx2>=player1x1&&p2spy1>=player1y1&&p2spy1<=player1y2){
+					var sm=document.createElement("audio");
+					sm.src="sminzhong.mp3";
+					sm.autoplay="autoplay";
+					mapa.appendChild(sm);
+					p1hps-=2;
+					console.log("命中");
+					p2gsp[p2sp].style.display="none";
+					continue;
+				};
+				if(p2spx2<=player1x2&&p2spx2>=player1x1&&p2spy1>=player1y1&&p2spy1<=player1y2){
+					var sm=document.createElement("audio");
+					sm.src="sminzhong.mp3";
+					sm.autoplay="autoplay";
+					mapa.appendChild(sm);
+					p1hps-=2;
+					console.log("命中");
+					p2gsp[p2sp].style.display="none";
+					continue;
+				};
+				if(p2spx2<=player1x2&&p2spx2>=player1x1&&p2spy2>=player1y1&&p2spy2<=player1y2){
+					var sm=document.createElement("audio");
+					sm.src="sminzhong.mp3";
+					sm.autoplay="autoplay";
+					mapa.appendChild(sm);
+					p1hps-=2;
+					console.log("命中");
+					p2gsp[p2sp].style.display="none";
+					continue;
+				};
+				if(player1x2>=p2spx1&&player1x2<=p2spx2&&player1y1>=p2spy1&&player1y1<=p2spy2){
+					var sm=document.createElement("audio");
+					sm.src="sminzhong.mp3";
+					sm.autoplay="autoplay";
+					mapa.appendChild(sm);
+					p1hps-=2;
+					console.log("命中");
+					p2gsp[p2sp].style.display="none";
+					break;
+				};
+				if(player1x2>=p2spx1&&player1x2<=p2spx2&&player1y2>=p2spy1&&player1y2<=p2spy2){
+					var sm=document.createElement("audio");
+					sm.src="sminzhong.mp3";
+					sm.autoplay="autoplay";
+					mapa.appendChild(sm);
+					p1hps-=2;
+					console.log("命中");
+					p2gsp[p2sp].style.display="none";
+					break;
+				};
+			}
+		}
+
+		//P血量计算
+		function phpjs(){
+			var p2hpgs=document.getElementsByClassName("p2hpge");
+			var p1hpgs=document.getElementsByClassName("p1hpge");
+			if(p1hps<0){
+				p1hps=0;
+			};
+			if(p2hps<0){
+				p2hps=0;
+			}
+			while(p1hpgs.length>p1hps){
+					p1hpgs[0].remove()
+				if(p1hps<=0){
+					alert("p2win");
+					clearInterval(JT);
+					break;
+				};
+			}
+			while(p2hpgs.length>p2hps){
+					p2hpgs[0].remove();
+				if(p2hps<=0){
+					alert("p1win");
+					clearInterval(JT);
+					break;
+				};
+			}
+		}
+	</script>
+</html>

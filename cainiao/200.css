@@ -1,0 +1,41 @@
+main{
+	width: 100%;
+}
+header{
+	width: 100%;
+}
+#left{
+	width: 28%;
+}
+#right{
+	width: 97%;
+}
+.small{
+	width: 25%;
+	height: 30px;
+	padding: 0;
+}
+.st{
+		font-size: 8px;
+}
+footer{
+	display: none;
+}
+#left{
+	display: none;
+}
+form{
+	display: none;
+}
+.wen{
+	display:none;
+}
+.small img{
+	display: none;
+}
+#Logo{
+	width: 60%;
+	background: url(Img/runoob-logo.png) ;
+	background-size:contain;
+	background-repeat:no-repeat ;
+}

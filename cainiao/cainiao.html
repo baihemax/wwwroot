@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html{
+				background-color: #F6F6F6;
+			}
+			#right,footer{
+				background-color: white;
+			}
+			header{
+				margin: 20px auto;
+				width: 1150px;
+			}
+			#Logo{
+				width: 60%;
+				background: url(Img/runoob-logo.png) no-repeat;
+				display: inline-block;
+				height: 39px;
+				vertical-align: middle;
+				margin: 0 auto;
+			}
+			form{
+				height: 39px;
+				display: inline-block;
+				width: 37%;
+				vertical-align: middle;
+			}
+			form span{
+				display: inline-block;
+				vertical-align: middle;
+				height:100%;
+			}
+			input[type=text]{
+				display: inline-block;
+				border-radius: 5px;
+				height: 30px;
+				vertical-align: middle;
+				box-shadow: 0 0 6px gainsboro;
+				width: 90%;
+			}
+			nav{
+				background-color: #96B97D;
+			}
+			nav ul{
+				list-style: none;
+				background-color:#96B97D;
+				height: 30px;
+				width: 1150px;
+    			margin: auto;
+			}
+			nav li{
+				float: left;
+				line-height: 30px;
+				color: white;
+				padding: 0 10px;
+			}
+			#left{
+				display: inline-block;
+				vertical-align: text-top;
+				width:182px ; 
+			}
+			#left ul{
+				display: inline-block;
+				border:1px #E5E5E5 solid;
+				list-style: none;
+				width: 98%;
+				border-radius:5px 5px 0 0 ;
+				font-size: 15px;
+				font-family: "微软雅黑";
+				color: rgb(51,51,51);
+			}
+			@font-face {
+				font-family:text;
+				src: url(Img/fontawesome-webfont.woff);
+			}
+			#fa:before{
+				font-family:text ;
+				content: "\f0c9";
+			}
+			#left ul li:before{
+				font-family:text ;
+				content: "\f08e";
+			}
+			#left ul li:nth-child(odd){
+				background-color: #FBFBFB;
+			}
+			#left ul li{
+				border-bottom: 1px #EFEFEF solid;
+				line-height: 32px;
+			}
+			#left span{
+				background-color:#EFEFEF ;
+				display: block;
+				font-size:16px ;
+				line-height: 28px;
+				color: #A3A3A3;
+			}
+			main{
+				width: 1150px;
+				margin: 20px auto;
+			}
+			#right{
+				display: inline-block;
+				border: 1px #EAEAEA solid;
+				width: 931px;
+				vertical-align: text-top;
+				padding: 13px;
+			}
+			.tietle{
+				font-size: 20px;
+				font-weight: bold;
+			}
+			.tietle:before{
+				font-family: text;
+				content: "\f0c9";
+			}
+			.st{
+				color: #64854c;
+				font-size: 16px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				line-height: 1.1;
+				text-align: left;
+			}
+			.small{
+				background-color: #F3F3F3;
+				width:258px;
+				padding: 8px 16px;
+				margin: 10px;
+				float: left;
+				height: 92px;
+			}
+			.small img{
+				float: left;
+				margin-left: 10px;
+    			margin-right: 10px;
+			}
+			.wen{
+				font-size:12px ;
+				font-weight:bold ;
+				color: #848484;
+			}
+			.small img{
+				width: 36px;
+				height: 36px;
+			}
+			footer{
+				border-width:1px 0 1px 0 ;
+				border-color:  #E4E4E4;
+				border-style:solid ;
+			}
+			#foot{
+				margin: auto;
+				width: 75%;
+				vertical-align: top;
+			}
+			#foot ul{
+				margin-left: 40px;
+				border-left:1px solid #E4E4E4 ;
+				list-style: inside;
+				vertical-align: top;
+				font-family: sans-serif;
+			}
+			#foot span{
+				font-size: 14px;
+				font-weight: bold;
+				color:#666666 ;
+				margin-left:40px ;
+			}
+			#foot li{
+				font-size: 12px;
+				vertical-align: top;
+				color: #808080;
+				margin-left:40px ;
+			}
+			#foot div{
+				display: inline-block;
+				vertical-align: top;
+			}
+			.db ul li{
+				list-style: none;
+			}
+			.BIG{
+				float: left;
+			}
+			.genpichong{
+	position: fixed;
+	right: 1%;
+	bottom: 1%;
+	width: 42px;
+	height: 123px;
+	
+}
+.genpichong div{
+	width: 40px;
+	height: 40px;
+	border: 1px solid #eee;
+	font-size: 12px;
+	font-family:font_free ;
+}
+.genpichong div:nth-of-type(1):before
+{
+	content: '\f106';
+	display: block;
+	font-size: 30px;
+	position: relative;
+	top: 6px;
+	left: 8px;
+	color: #96b97d;
+}
+.genpichong div:nth-of-type(2):before
+{
+	content: '\f029';
+	display: block;
+	font-size: 30px;
+	position: relative;
+	top: 6px;
+	left: 8px;
+	color: #96b97d;
+}
+.genpichong div:nth-of-type(3)
+{
+	text-align: center;
+	line-height: 40px;
+	color: white;
+	background-color:#96b97d;
+}
+
+		</style>
+		<link rel="stylesheet" type="text/css" media="only screen and (min-width:1005px) and (max-width:1150px)" href="1150.css"/>
+		<link rel="stylesheet" type="text/css" media="only screen and (max-width:1005px) and (min-width:750px)" href="750.css"/>
+		<link rel="stylesheet" type="text/css" media="only screen and (max-width:750px) and (min-width:450px)" href="450.css"/>
+		<link rel="stylesheet" type="text/css" media="only screen and (max-width:450px) and (min-width:200px)" href="200.css"/>
+	</head>
+	<body>
+		<header>
+			<div id="Logo">
+			</div>
+			<form action="" method="post">
+				<span id=""> </span><input type="text" value="" placeholder="搜索..."/>
+			</form>
+		</header>
+		<nav>
+			<ul>
+				<li>首页</li>
+				<li>菜鸟笔记</li>
+				<li>菜鸟工具</li>
+				<li>参考手册</li>
+				<li>测验/考试</li>
+			</ul>
+		</nav>
+		<main>
+			<div id="left">
+				<ul><span id="fa">全部教程</span>
+					<li>HTML/CSS</li>
+					<li>JavaScritp</li>
+					<li>服务端</li>
+					<li>数据库</li>
+					<li>移动端</li>
+					<li>XML 教程</li>
+					<li>ASP.NET</li>
+					<li>Web services</li>
+					<li>开发工具</li>
+					<li>网站建设</li>
+				</ul>
+			</div>
+			<div id="right">
+				<div class="BIG">
+					<span class="tietle">HTML/CSS</span>
+					<hr />
+					<div class="small">
+						<h4 class="st">【学习 HTML】</h4>
+						<img src="Img/html.png"/>
+						<span class="wen">HTML,即超文本标记语言(Hyper Text Markup Language)</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 HTML5】</h4>
+						<img src="Img/html5.png"/>
+						<span class="wen">HTML5是下一点HTML标准</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 CSS】</h4>
+						<img src="Img/css.png"/>
+						<span class="wen">层叠样式表(Cascding Style Sheet)</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习CSS3】</h4>
+						<img src="Img/css3.png"/>
+						<span class="wen">CSS3是CSS技术的升级版</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 Bootstrap】</h4>
+						<img src="Img/bootstrap.png"/>
+						<span class="wen">Bootrap,来自Twitter，是目前最受欢迎的前端框架</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 Foundation】</h4>
+						<img src="Img/foundation.png"/>
+						<span class="wen">Foundation用于开发响应式的HTML,Css and JavaScript</span>
+					</div>
+				</div>
+				<div class="BIG">
+					<span class="tietle">JavaScript</span>
+					<hr />
+					<div class="small">
+						<h4 class="st">【学习 JavaScript】</h4>
+						<img src="Img/js.png"/>
+						<span class="wen">Java Script是Web的编程语言</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 HTML DOM】</h4>
+						<img src="Img/htmldom.png"/>
+						<span class="wen">HTML DOM 定义了访问和操作 HTML文档的标准方法</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 jQuery】</h4>
+						<img src="Img/jquery.png"/>
+						<span class="wen">jQuery是一个Java库</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 AngularJS】</h4>
+						<img src="Img/angularjs.png"/>
+						<span class="wen">AngularJS 通过新的属性和表达式扩展了HTML</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 React】</h4>
+						<img src="Img/react.png"/>
+						<span class="wen">React是一个用于构建用户界面的JAVA SRCRIPT库</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 JQuery UI】</h4>
+						<img src="Img/jqueryui.png"/>
+						<span class="wen">JQueru UI是建立在JQuery上的一组用户界面交互,特效，小部件及主题</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 JQuery EasyUI】</h4>
+						<img src="Img/jeasyui.png"/>
+						<span class="wen">JQueru UI是建立在JQuery上的一组用户界面交互,特效，小部件及主题</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 Node.js】</h4>
+						<img src="Img/nodejs.png"/>
+						<span class="wen">Node.js是运行在服务器端的Java Script</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 AJAX】</h4>
+						<img src="Img/ajax.png"/>
+						<span class="wen">AJAX=Asynchronous Java Script and XML(异步的Java Script和XML)</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 JSON】</h4>
+						<img src="Img/json.png"/>
+						<span class="wen">JSON是储存和交换文本信息的语法</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 Highcharts】</h4>
+						<img src="Img/highcharts.png"/>
+						<span class="wen">Highcharts是一个用纯Java Script编写的一个图表库</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 Google 地图】</h4>
+						<img src="Img/googleapi.png"/>
+						<span class="wen">Google地图接口使用说明</span>
+					</div>
+				</div>
+				<div class="BIG">
+					<span class="tietle">服务端</span>
+					<hr />
+					<div class="small">
+						<h4 class="st">【学习 PHP】</h4>
+						<img src="Img/pl.png"/>
+						<span class="wen">PHP是一种通用开源脚本语言</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 Python】</h4>
+						<img src="Img/python.png"/>
+						<span class="wen">Python是一种面向对象,解释型计算机程序设计语言</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 Pytonh3】</h4>
+						<img src="Img/python3.png"/>
+						<span class="wen">Pytonh升级版,变化较大</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 Django】</h4>
+						<img src="Img/django.png"/>
+						<span class="wen">Django是一个开放源代码的Web应用框架,由Python写成</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 Linux】</h4>
+						<img src="Img/linux.png"/>
+						<span class="wen">Linux是一套免费使用和自由传播的类Unix操作系统</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 Docker】</h4>
+						<img src="Img/docker.png"/>
+						<span class="wen">Docker是一个开源的应用容器引擎，基于Go语言</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 Ruby】</h4>
+						<img src="Img/ruby.png"/>
+						<span class="wen">一种为简单快捷的面向对象编程(面向对象程序设计)而创的脚本语言</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 Java】</h4>
+						<img src="Img/java.png"/>
+						<span class="wen">一种可以撰写跨平台应用软件的面向对象的程序设计语言</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 C】</h4>
+						<img src="Img/c.png"/>
+						<span class="wen">一门通用计算机编程语言</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 C++】</h4>
+						<img src="Img/cpp.png"/>
+						<span class="wen">C++S 在C语言的基础上开发的一种通用编程语言</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 Perl】</h4>
+						<img src="Img/perl.png"/>
+						<span class="wen">Perls是高级,通用,直译,动态的程序语言</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 Servlet】</h4>
+						<img src="Img/servlet.png"/>
+						<span class="wen">运行在Web服务器或应用服务器上的程序</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 JSP】</h4>
+						<img src="Img/jsp.png"/>
+						<span class="wen">JSP与PHP,ASP,ASP.NET等语言类似,运行在服务端的语言</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 Lua】</h4>
+						<img src="Img/lua.png"/>
+						<span class="wen">Lua是一种轻量小巧的脚本语言，用标准C语言编写并以源代码形式开放</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 Scala】</h4>
+						<img src="Img/scala.png"/>
+						<span class="wen">Scala是一门多范式(multi-paradigm)的编程语言。</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 Go】</h4>
+						<img src="Img/go.png"/>
+						<span class="wen">GO语言是谷歌推出的一种全新的编程语言</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【设计模式】</h4>
+						<img src="Img/design-pattern.png"/>
+						<span class="wen">设计模式代表了最佳的实践,通常被用经验的面向对象的软件开发人员所采用</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【正则表达式】</h4>
+						<img src="Img/regexp.png"/>
+						<span class="wen">正则表达式是对字符串操作的一种逻辑公式</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 ASP】</h4>
+						<img src="Img/asp.png"/>
+						<span class="wen">ASP(Active Server Pages 动态服务器页面)是一种生成动态交互性网页的</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 AppML】</h4>
+						<img src="Img/appml.png"/>
+						<span class="wen">AppML是一个为web应用程序设计的HTML扩展框</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 VBscript】</h4>
+						<img src="Img/vbscript.png"/>
+						<span class="wen">一种微软环境下轻量级的解释型语言</span>
+					</div>
+				</div>
+				<div class="BIG">
+					<span class="tietle">数据库</span>
+					<hr />
+					<div class="small">
+						<h4 class="st">【学习 SQL】</h4>
+						<img src="Img/sql.png"/>
+						<span class="wen">结构化查询语言(Structured Query Language)</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 Mysql】</h4>
+						<img src="Img/mysql.png"/>
+						<span class="wen">My SQL是一个关系型数据库管理系统</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 SQLite】</h4>
+						<img src="Img/sqlite.png"/>
+						<span class="wen">一款轻量的数据库</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 MongoDB】</h4>
+						<img src="Img/mongodb.png"/>
+						<span class="wen">Mongo DB是目前在IT行业非常流行的一种非关系型数据库(NoSqi)</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 Redis】</h4>
+						<img src="Img/redis.png"/>
+						<span class="wen">一个高性能的key-value数据库</span>
+					</div>
+					<div class="small">
+						<h4 class="st">【学习 Memcached】</h4>
+						<img src="Img/Memcached.png"/>
+						<span class="wen">Memcached是一个自由开源的,高性能，分布式内存对象缓存系统。</span>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div id="foot">
+				<div class="">
+					<ul><span class="">在线实例</span>
+						<li>HTML实例</li>
+						<li>CSS 实例</li>
+						<li>JavaScript 实例</li>
+						<li>Ajax 实例</li>
+						<li>jQuery 实例</li>
+						<li>XML 实例</li>
+						<li>Java 实例</li>
+					</ul>
+				</div>
+				<div class="">
+					<ul><span class="">字符集&工具</span>
+						<li>HTML 字符集设置</li>
+						<li>HTML ASCII 字符集</li>
+						<li>HTML ISO-8859-1</li>
+						<li>HTML 实体符号</li>
+						<li>HTML 拾色器</li>
+						<li>JSON 格式化工具</li>
+					</ul>
+				</div>
+				<div class="">
+					<ul><span class="">最新更新</span>
+						<li>CSS3 text-empha...</li>
+						<li>Vue2.0 新手入门...</li>
+						<li>AngularJS2 模板...</li>
+						<li>AngularJS2 表单</li>
+						<li>AngularJS2 用户...</li>
+						<li>jQuery Message</li>
+						<li>AngularJS2 数据...</li>
+					</ul>
+				</div>
+				<div class="">
+					<ul><span class="">站点信息</span>
+						<li>意见反馈</li>
+						<li>免责声明</li>
+						<li>关于我们</li>
+						<li>文章归档</li>
+					</ul>
+				</div>
+				<div class="db">
+					<ul><span class="">关注微信</span>
+						<li><img width="141" height="141" src="Img/qrcode.jpg"/></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+		<div class="genpichong">
+			<div></div>
+			<div></div>
+			<div>反馈</div>
+		</div>
+	</body>
+</html>

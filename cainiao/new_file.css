@@ -1,0 +1,30 @@
+body{background:red;
+	}
+ul{list-style:none;
+   margin:0px;
+   padding:0px;
+   width:624px;
+   margin:50px;
+   height:30px;
+   margin:0 auto;		
+	}
+li{width:100px
+   height:30px;
+   float:left;
+   backgoround-color:bule;
+   color:white;
+   font-family:"微软雅黑";
+   line-height;30px;
+   border-radius:10px;
+   text-align:center;
+   margin:0 4px 0 0; 			
+	}
+ #fuji{width:98%;
+	margin:auto;
+	}
+.ziji{width:95%;
+height: 300px;
+      margin:auto;
+      background-color:yellow;
+      float: left;
+	}

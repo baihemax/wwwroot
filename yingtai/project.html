@@ -1,0 +1,2513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>仿银泰网 - 银泰百货连锁在线购物中心，银泰商业集团官方购物网站</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+            $("#on-first").hover(function(){
+//                $("#on-first").css({"overflow":"visible"});
+//                $(this).removeClass("on-first").addClass("on-firstD");
+                $(".btn a i").last().addClass("retate1");
+                $("#on-first>a li").last().removeClass("retate2")
+                $(this).children("div").css({"display":"block","z-index":"6"})
+            },function(){
+//                $(this).removeClass("on-firstD").addClass("on-first")
+                $(".btn a i").last().removeClass("retate1");
+                $("#on-first>a li").last().addClass("retate2");
+                $(this).children("div").css({"display":"none","z-index":"1"})
+            });
+            $(".on-sec").hover(function(){
+                $(this).children("div").css({"display":"block","z-index":"5"})
+            },function(){
+                $(this).children("div").css({"display":"none","z-index":"1"})
+            })
+            $("#mymap").hover(function(){
+                $(this).children(".top-down").css({"display":"block","background":"#ffffff"});
+                $(this).addClass("on");
+                $("#mymap i").removeClass("menu-btn").addClass("menu-btn2")
+            },function(){
+                $(this).children(".top-down").css({"display":"none"}).removeClass("on");
+                $(this).removeClass("on");
+                $("#mymap i").removeClass("menu-btn2").addClass("menu-btn")
+            })
+            $("input[type=search]").focus(function(){
+                $(this).val("")
+            }).blur(function(){
+                $(this).val("奢品五折封顶")
+            })
+        })
+    </script>
+</head>
+<body>
+<header>
+
+    <div class="top">
+        <div class="wrap">
+        <ul class="top-left left">
+            <li>
+                <a href="javascript:void(0)">
+                    <i class="top-home left"></i>
+                    银泰首页
+                </a>
+            </li>
+            <li class="line"></li>
+            <li class="on-first" id="on-first">
+                <a href="javascript:void(0)" title="微信"><i class="top-weixin left"></i>微信<i class="menu-btn"></i></a>
+                <div class="btn">
+                    <a href=""><i></i>微信<i></i></a>
+                    <img src="img/wechat.png">
+                </div>
+            </li>
+            <li class="line"></li>
+            <li class="on-sec">
+                <a href="javascript:void(0)"><i class="top-tel left"></i>手机银泰<i class="downlogo"></i></a>
+                <div class="btn-sec">
+                    <a href="javascript:void(0)"><i class=""></i>手机银泰<i></i></a>
+
+                    <img src="img/appphone.png">
+                    </div>
+            </li>
+        </ul>
+        <ul class="top-right right">
+            <li>
+                <span>Hi，欢迎来到银泰网！</span>
+                <a href="javascript:void(0)" class="in-hello">登录</a>
+                <a href="javascript:void(0)">注册</a>
+            </li>
+            <li class="line"></li>
+            <li>
+                <a href="javascript:void(0)">我的订单</a>
+            </li>
+            <li class="line"></li>
+            <li id="mymap">
+                <a href="javascript:void(0)">我的银泰<i class="menu-btn right"></i></a>
+                <ul class="top-down">
+                    <li><a href="">我的收藏</a></li>
+                    <li><a href="">我的余额</a></li>
+                    <li><a href="">我的银元</a></li>
+                    <li><a href="">我的银泰卡</a></li>
+                    <li><a href="">我的优惠劵</a></li>
+                    <li><a href="">我的积分</a></li>
+                </ul>
+            </li>
+            <li class="line"></li>
+            <li>
+                <a href="javascript:void(0)">银泰卡</a>
+            </li>
+            <li class="line"></li>
+            <li>
+                <a href="javascript:void(0)">帮助中心</a>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+        </div>
+    </div>
+        <div class="wrap search-box">
+            <div class="logo left">
+                <a href="#"><img src="img/logo4_13.jpg"></a>
+            </div>
+                <div class="list">
+            <form  action="" >
+                <input type="search" value="奢品五折封顶"/>
+            </form>
+                    <div>
+                        <a href="#">奢品针织衫</a>
+                        <span><a href="#">旧衣新搭</a></span>
+                        <a href="#">粉红少女</a>
+                        <a href="#">奢品围巾</a>
+                    </div>
+                </div>
+            <div class="right shopping">
+                <a href="javascript:void (0)"><img src="img/search-pic_03.jpg"></a>
+                <p><a href="#">技术升级公告</a></p>
+            </div>
+        </div>
+    <div class="clearfix"></div>
+    <nav class="wrap nav-box">
+        <ul class="nav-top">
+            <li class="nav-down">
+                <a href="#"> 全部分类</a>
+                <dl class="nav-ul">
+                    <dt>
+                        <div>
+                         <a href="#"><em class="img1"></em>名品</a><i class="line2">|</i><a href="">秋冬尚新</a>
+                        </div>
+                    </dt>
+                    <dd class="nav-first ">
+                    <div class="nav-sec1 ">
+                        <div>
+                        <h4><a href="#">男装</a></h4>
+                        <a href="#">新品</a>
+                           <a href="#">卫衣</a>
+                            <a href="#">针织衫</a>
+                            <a href="#">裤装</a>
+                            <a href="#">外套</a>
+                        </div>
+                        <div>
+                            <h4><a href="#">女装</a></h4>
+                            <a href="#">新品</a>
+                            <a href="#">卫衣</a>
+                            <a href="#">针织衫</a>
+                            <a href="#">裤装</a>
+                            <a href="#">外套</a>
+                            <a href="#">裙装</a>
+                        </div>
+                        <div>
+                            <h4><a href="#">鞋靴</a></h4>
+                            <a href="#">新品</a>
+                            <a href="#">女士单鞋</a>
+                            <a href="#">男鞋</a>
+                            <a href="#">靴子</a>
+                        </div>
+                        <div>
+                            <h4><a href="#">女包</a></h4>
+                            <a href="#">新品</a>
+                            <a href="#">手提斜跨包</a>
+                            <a href="#">单肩包</a>
+                            <a href="#">钱夹</a>
+                            <a href="#">手拿包</a>
+                        </div>
+                        <div>
+                            <h4><a href="#">男包</a></h4>
+                            <a href="#">新品</a>
+                            <a href="#">钱包</a>
+                            <a href="#">单肩包</a>
+                            <a href="#">手拿包</a>
+                            <a href="#">手提包</a>
+                        </div>
+                        <div>
+                            <h4><a href="#">配饰</a></h4>
+                            <a href="#">新品</a>
+                            <a href="#">围巾</a>
+                            <a href="#">帽子</a>
+                            <a href="#">腰带</a>
+                        </div>
+                    </div>
+                    <div class="nav-sec2">
+                        <h4>品牌</h4>
+                        <div>
+                            <a href="#">BURBERRY</a>
+                            <a href="#">FERRAGMNO</a>
+                            <a href="#">GUCCI</a>
+                            <a href="#">COACH</a>
+                            <a href="#">ARMANI JEANS</a>
+                            <a href="#">DIESEL</a>
+                            <a href="#">VERSACE</a>
+                            <a href="#">MAX&CO.</a>
+                            <a href="#">FRED PERRY</a>
+                            <a href="#">CELINEY</a>
+                            <a href="#">SPORTMAX</a>
+                            <a href="#">MAX MARA</a>
+                            <a href="#">MICHAEL KORS</a>
+                            <a href="#">ZEGNA</a>
+                            <a href="#">FENDI</a>
+                            <a href="#">EMPORIO ARMANI</a>
+                            <a href="#">BALLY</a>
+                            <a href="#">ALEXANDER MCQUEEN</a>
+                        </div>
+                    </div>
+                    </dd>
+                    <dt>
+                    <div>
+                        <a href="#"><em class="img2"></em>女装</a><i class="line2">|</i><a href="">秋冬上新</a>
+                    </div>
+                    </dt>
+                    <dd class="nav-first ">
+                        <div class="nav-sec1">
+                            <div>
+                                <h4><a href="#">热门搜索</a></h4>
+                                <a href="#">商场同款</a>
+                                <a href="#">连衣裙</a>
+                                <a href="#">打底裤衫</a>
+                                <a href="#">风衣</a>
+                                <a href="#">大衣</a>
+                                <a href="#">裤装</a>
+                                <a href="#">羽绒服</a>
+                                <a href="#">棉服</a>
+                                <a href="#">皮衣/皮草</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">流行元素</a></h4>
+                                <a href="#">欧美风</a>
+                                <a href="#">英伦风</a>
+                                <a href="#">韩范</a>
+                                <a href="#">简约风</a>
+                                <a href="#">刺绣</a>
+                                <a href="#">休闲风</a>
+                                <a href="#">纯色</a>
+                                <a href="#">森女棉麻</a>
+                                <a href="#">绣花</a>
+                                <a href="#">蕾丝衫</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">上装</a></h4>
+                                <a href="#">卫衣/绒衣</a>
+                                <a href="#">针织衫</a>
+                                <a href="#">外套</a>
+                                <a href="#">风衣</a>
+                                <a href="#">小西装</a>
+                                <a href="#">大衣</a>
+                                <a href="#">衬衫</a>
+                                <a href="#">吊带马甲</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">下装</a></h4>
+                                <a href="#">牛仔裤</a>
+                                <a href="#">休闲裤</a>
+                                <a href="#">连衣裤</a>
+                                <a href="#">哈伦裤</a>
+                                <a href="#">西装裤</a>
+                                <a href="#">长裤</a>
+                                <a href="#">九分裤</a>
+                                <a href="#">七分裤</a>
+                                <a href="#">铅笔裤</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">裙装</a></h4>
+                                <a href="#">半身裙</a>
+                                <a href="#">长袖裙</a>
+                                <a href="#">牛仔裙</a>
+                                <a href="#">连衣裙</a>
+                                <a href="#">手提包</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">女士内衣</a></h4>
+                                <a href="#">文胸</a>
+                                <a href="#">底裤</a>
+                                <a href="#">家居服</a>
+                                <a href="#">束身衣</a>
+                                <a href="#">吊带/背心</a>
+                                <a href="#">袜品</a>
+                                <a href="#">泳衣</a>
+                            </div>
+                        </div>
+                        <div class="nav-sec2">
+                            <h4>品牌</h4>
+                            <div>
+                                <a href="#">江南布衣</a>
+                                <a href="#">茵曼</a>
+                                <a href="#">洛可可</a>
+                                <a href="#">孙安真</a>
+                                <a href="#">颜域</a>
+                                <a href="#">莉莉的</a>
+                                <a href="#">年歌</a>
+                                <a href="#">Miss Lisa</a>
+                                <a href="#">XG</a>
+                                <a href="#">BEAUTY SAID</a>
+                                <a href="#">breadnbutter</a>
+                                <a href="#">鸭鸭</a>
+                                <a href="#"> 欧怀</a>
+                                <a href="#">Bees do</a>
+                                <a href="#">CMYK</a>
+                                <a href="#">初语</a>
+                                <a href="#">axelledesoie</a>
+                                <a href="#">贝瑞英客</a>
+                                <a href="#">雨中邂逅</a>
+                                <a href="#">格子廊</a>
+                                <a href="#">茵佳兰迪</a>
+                                <a href="#">奈西娅</a>
+                                <a href="#">INXX</a>
+                                <a href="#">G-STAR RAW</a>
+                            </div>
+                        </div>
+                    </dd>
+                    <dt>
+                    <div>
+                        <a href="#"><em class="img3"></em>男装</a><i class="line2" >|</i><a href="">型男专场</a>
+                    </div>
+                    </dt>
+                    <dd class="nav-first ">
+                        <div class="nav-sec1">
+                            <div>
+                                <h4><a href="#">热门搜索</a></h4>
+                                <a href="#">T恤</a>
+                                <a href="#">衬衫</a>
+                                <a href="#">卫衣</a>
+                                <a href="#">外套</a>
+                                <a href="#">休闲裤</a>
+                                <a href="#">牛仔裤</a>
+                                <a href="#">短裤</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">秋季上新</a></h4>
+                                <a href="#">长袖衬衫</a>
+                                <a href="#">长袖POLO</a>
+                                <a href="#">长袖T恤</a>
+                                <a href="#">针织衫</a>
+                                <a href="#">夹克/外套</a>
+                                <a href="#">休闲裤</a>
+                                <a href="#">牛仔裤</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">上装</a></h4>
+                                <a href="#">衬衫</a>
+                                <a href="#">T恤</a>
+                                <a href="#">卫衣</a>
+                                <a href="#">夹克</a>
+                                <a href="#">针织衫</a>
+                                <a href="#">POLO衫</a>
+                                <a href="#">短袖T恤</a>
+                                <a href="#">短袖衬衫</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">下装</a></h4>
+                                <a href="#">牛仔裤</a>
+                                <a href="#">休闲裤</a>
+                                <a href="#">西裤</a>
+                                <a href="#">九分裤</a>
+                                <a href="#">短裤</a>>
+                            </div>
+                            <div>
+                                <h4><a href="#">男士内衣</a></h4>
+                                <a href="#">底裤</a>
+                                <a href="#">背心/T恤</a>
+                                <a href="#">家居服</a>
+                                <a href="#">男士袜品</a>
+                            </div>
+                        </div>
+                        <div class="nav-sec2">
+                            <h4>品牌</h4>
+                            <div>
+                                <a href="#">欧林浦</a>
+                                <a href="#">华帝卡尼</a>
+                                <a href="#">俞兆林</a>
+                                <a href="#">IZOD</a>
+                                <a href="#">欧塞卡</a>
+                                <a href="#">菲克</a>
+                                <a href="#">威秀</a>
+                                <a href="#">Magic power</a>
+                                <a href="#">美国马球协会</a>
+                                <a href="#">啄木鸟</a>
+                                <a href="#">战地吉普</a>
+                                <a href="#">伯爵卓尔</a>
+                                <a href="#"> JASONWOOD</a>
+                                <a href="#">迪赛吉普</a>
+                                <a href="#">朗悦</a>
+                                <a href="#">GENIO LaMODE</a>
+                                <a href="#">BEE ARMOR</a>
+                                <a href="#">高尔普</a>
+                                <a href="#">英雄之鹰</a>
+                                <a href="#">浮世绘</a>
+                                <a href="#">罗朗巴特</a>
+                                <a href="#">COLLEGE HOME</a>
+                                <a href="#">摩都登</a>
+                                <a href="#">北纬30度</a>
+                                <a href="#">依文</a>
+                            </div>
+                        </div>
+                    </dd>
+                    <dt>
+                    <div>
+                        <a href="#"><em class="img4"></em>鞋靴</a><i class="line2">|</i><a href="">时尚鞋品</a>
+                    </div>
+                    </dt>
+                    <dd class="nav-first ">
+                        <div class="nav-sec1">
+                            <div>
+                                <h4><a href="#">热门搜索</a></h4>
+                                <a href="#">单鞋</a>
+                                <a href="#">粗跟鞋</a>
+                                <a href="#">平底鞋</a>
+                                <a href="#">上新</a>
+                                <a href="#">内增高</a>
+                                <a href="#">雪地靴</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">女鞋</a></h4>
+                                <a href="#">粗跟鞋</a>
+                                <a href="#">中跟</a>
+                                <a href="#">浅口鞋</a>
+                                <a href="#">尖头鞋</a>
+                                <a href="#">乐福鞋</a>
+                                <a href="#">坡跟鞋</a>
+                                <a href="#">女鞋出清</a>
+                            </div>
+
+                            <div>
+                                <h4><a href="#">男鞋</a></h4>
+                                <a href="#">休闲鞋</a>
+                                <a href="#">商务鞋</a>
+                                <a href="#">帆布鞋</a>
+                                <a href="#">单鞋</a>
+                                <a href="#">个性潮鞋</a>>
+                                <a href="#">男鞋出清</a>>
+                            </div>
+                            <div>
+                                <h4><a href="#">冬季保暖季 优惠抢先购 全场满200减30</a></h4>
+                            </div>
+                        </div>
+                        <div class="nav-sec2">
+                            <h4>品牌</h4>
+                            <div>
+                                <a href="#">玖熙</a>
+                                <a href="#">FED</a>
+                                <a href="#">莱尔斯丹</a>
+                                <a href="#">百丽</a>
+                                <a href="#">天美意</a>
+                                <a href="#">茵奈儿</a>
+                                <a href="#">他她</a>
+                                <a href="#">星期六</a>
+                                <a href="#">大洋洲袋鼠</a>
+                                <a href="#">朗蒂维</a>
+                                <a href="#">哈森</a>
+                                <a href="#">美国U牌</a>
+                                <a href="#"> 欧嘉</a>
+                                <a href="#">UZXG</a>
+                                <a href="#">奈绮尔</a>
+                                <a href="#">西瑞</a>
+                                <a href="#">康奈</a>
+                                <a href="#">华伦世家</a>
+                                <a href="#">帕达索</a>
+                                <a href="#">美丽佳人</a>
+                                <a href="#">歌牧斯</a>
+                                <a href="#">玛菲玛图</a>
+                                <a href="#">初语</a>
+                                <a href="#">COZYSTEPS</a>
+                                <a href="#">百年纪念</a>
+                                <a href="#">欧希尔</a>
+                                <a href="#">朵牧</a>
+                                <a href="#">才子</a>
+                                <a href="#">帝卡文迪</a>
+                                <a href="#">花花公子</a>
+                                <a href="#">圣大保罗</a>
+                                <a href="#">Paolo Conte</a>
+                            </div>
+                        </div>
+                    </dd>
+                    <dt>
+                    <div>
+                        <a href="#"><em class="img5"></em>美妆</a><i class="line2">|</i><a href="">护肤套装</a>
+                    </div>
+                    </dt>
+                    <dd class="nav-first ">
+                        <div class="nav-sec1">
+                            <div>
+                                <h4><a href="#">韩潮来袭 海淘购</a></h4>
+
+                            </div>
+                            <div>
+                                <h4><a href="#">面部保养</a></h4>
+                                <a href="#">面膜</a>
+                                <a href="#">护肤套装</a>
+                                <a href="#">洁面</a>
+                                <a href="#">爽肤水</a>
+                                <a href="#">乳液</a>
+                                <a href="#">精华</a>
+                                <a href="#">眼霜/啫喱</a>
+                                <a href="#">日霜</a>
+                                <a href="#">晚霜</a>
+                                <a href="#">去角质</a>
+                                <a href="#">精油</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">魅力彩妆</a></h4>
+                                <a href="#">粉底液/粉底膏</a>
+                                <a href="#">BB霜</a>
+                                <a href="#">遮瑕</a>
+                                <a href="#">散粉/蜜粉</a>
+                                <a href="#">卸妆</a>
+                                <a href="#">睫毛膏</a>
+                                <a href="#">唇膏/口红</a>
+                                <a href="#">唇彩/唇蜜</a>
+                                <a href="#">彩妆工具</a>
+                                <a href="#">美甲</a>
+                                <a href="#">彩妆套装</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">香氛洗护</a></h4>
+                                <a href="#">女士香水</a>
+                                <a href="#">男士香水</a>
+                                <a href="#">其他香氛</a>
+                                <a href="#">香薰精油</a>
+                                <a href="#">洗护套装</a>>
+                                <a href="#">洗发</a>>
+                                <a href="#">护发</a>>
+                            </div>
+                            <div>
+                                <h4><a href="#"> 身体护理</a></h4>
+                                <a href="#">身体套装</a>
+                                <a href="#">沐浴露</a>
+                                <a href="#">身体乳</a>
+                                <a href="#">身体清洁</a>
+                                <a href="#">丰胸瘦身</a>
+                                <a href="#">手足护理</a>
+                                <a href="#">个人护理</a>
+                            </div>
+                            <div>
+                                <h4><a href="#"> 男士护理</a></h4>
+                                <a href="#">面部清洁</a>
+                                <a href="#">爽肤水/须后水</a>
+                                <a href="#">乳液/面霜</a>
+                                <a href="#">男士香水</a>
+                                <a href="#">洗发水/沐浴露</a>
+                            </div>
+                        </div>
+                        <div class="nav-sec2">
+                            <h4>品牌</h4>
+                            <div>
+                                <a href="#">科颜氏</a>
+                                <a href="#">兰蔻</a>
+                                <a href="#">科莱丽</a>
+                                <a href="#">碧欧泉</a>
+                                <a href="#">高丝</a>
+                                <a href="#">欧莱雅</a>
+                                <a href="#">贝德玛</a>
+                                <a href="#">薇姿</a>
+                                <a href="#">雅漾</a>
+                                <a href="#">欧珀莱</a>
+                                <a href="#">植村秀</a>
+                                <a href="#">YSL</a>
+                                <a href="#"> 郝莲娜</a>
+                                <a href="#">兰芝</a>
+                                <a href="#">资生堂</a>
+                                <a href="#">雅诗兰黛</a>
+                                <a href="#">悦木之源</a>
+                                <a href="#">Bobbi Brown</a>
+                                <a href="#">倩碧</a>
+                                <a href="#">茵芙莎</a>
+                                <a href="#">欧苏丹</a>
+                                <a href="#">贝玲妃</a>
+                                <a href="#">SK-II</a>
+                                <a href="#">Dodo</a>
+                                <a href="#">依云</a>
+                                <a href="#">自然乐园</a>
+                                <a href="#">所望</a>
+                                <a href="#">理肤泉</a>
+                                <a href="#">佰草集</a>
+                                <a href="#">百雀羚</a>
+                                <a href="#">曼秀雷登</a>
+                                <a href="#">我的心机</a>
+                                <a href="#">丝塔芙</a>
+                                <a href="#">森田药妆</a>
+                                <a href="#">GUCCI</a>
+                                <a href="#">菲拉格慕</a>
+                                <a href="#">玛雅科布</a>
+                                <a href="#">宝格丽</a>
+                                <a href="#">Tangle Teezer</a>
+                            </div>
+                        </div>
+                    </dd>
+                    <dt>
+                    <div>
+                        <a href="#"><em class="img6"></em>箱包</a><i class="line2" >|</i><a href="">女神单肩</a>
+                    </div>
+                    </dt>
+                    <dd class="nav-first ">
+                        <div class="nav-sec1">
+                            <div>
+                                <h4><a href="#">热门搜索</a></h4>
+                                <a href="#">女士印花</a>
+                                <a href="#">鳄鱼纹</a>
+                                <a href="#">男士斜挎包</a>
+                                <a href="#">链条包</a>
+                                <a href="#">减龄女包</a>
+                                <a href="#">女士小资</a>
+                                <a href="#">拉杆箱</a>
+                                <a href="#">女士双肩</a>
+                                <a href="#">海蛇皮</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">时尚女包</a></h4>
+                                <a href="#" title="外交官 超值推荐">外交官 超值推荐</a>
+                                <a href="#">单肩包</a>
+                                <a href="#">手提包</a>
+                                <a href="#">斜挂包</a>
+                                <a href="#">手拿包</a>
+                                <a href="#">双肩包</a>
+                                <a href="#">手提/斜跨多用包</a>
+                                <a href="#">帆布包</a>
+                                <a href="#">杀手包</a>
+                                <a href="#">贝壳包</a>
+                                <a href="#">欧美包</a>
+                                <a href="#">韩版包</a>
+                                <a href="#">链条包</a>
+                                <a href="#">编织包</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">精品男包</a></h4>
+                                <a href="#">双肩包</a>
+                                <a href="#">单肩包</a>
+                                <a href="#">手提包</a>
+                                <a href="#">斜跨包</a>
+                                <a href="#">手拿包</a>
+                                <a href="#">手提/斜跨多用包</a>
+                                <a href="#">商务包</a>
+                                <a href="#">帆布包</a>
+                                <a href="#">休闲包</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">功能包</a></h4>
+                                <a href="#">女士钱包</a>
+                                <a href="#">男士钱包</a>
+                                <a href="#">电脑包</a>
+                                <a href="#">登山包</a>
+                                <a href="#">证件夹</a>
+                                <a href="#">零钱包</a>
+                                <a href="#">卡包</a>
+                                <a href="#">防水包</a>
+                            </div>
+                            <div>
+                                <h4><a href="#"> 旅行箱包</a></h4>
+                                <a href="#">旅行包</a>
+                                <a href="#">旅行箱</a>
+                                <a href="#">万向滚轮拉杆箱</a>
+                            </div>
+                        </div>
+                        <div class="nav-sec2">
+                            <h4>品牌</h4>
+                            <div>
+                                <a href="#">ELLE</a>
+                                <a href="#">外交官</a>
+                                <a href="#">阿特密</a>
+                                <a href="#">幸福里</a>
+                                <a href="#">克路驰</a>
+                                <a href="#">琪熙</a>
+                                <a href="#">柒格格</a>
+                                <a href="#">WEEKENDER</a>
+                                <a href="#">佛莱尔唐.阿隆索</a>
+                                <a href="#">JESSIE & JANE</a>
+                                <a href="#">only</a>
+                                <a href="#">妮维奥</a>
+                                <a href="#">那沃</a>
+                                <a href="#">RIMOWA</a>
+                                <a href="#">歌莉娅</a>
+                                <a href="#">波斯丹顿</a>
+                                <a href="#">海森梅尔</a>
+                                <a href="#">Y6</a>
+                                <a href="#">卓凡尼.华伦天奴</a>
+                                <a href="#">袋研人</a>
+                                <a href="#">微缇</a>
+                                <a href="#">法国大使</a>
+                                <a href="#">GUCCI</a>
+                                <a href="#">珑骧</a>
+                                <a href="#">OMTO</a>
+                                <a href="#">BABAMA</a>
+                            </div>
+                        </div>
+                    </dd>
+                    <dt>
+                    <div>
+                        <a href="#"><em class="img7"></em>运动</a><i class="line2">|</i><a href="">运动鞋服</a>
+                    </div>
+                    </dt>
+                    <dd class="nav-first ">
+                        <div class="nav-sec1">
+                            <div>
+                                <h4><a href="#">运动休闲服</a></h4>
+                                <a href="#">运动裤</a>
+                                <a href="#">卫衣/连帽衫</a>
+                                <a href="#">夹克/外套</a>
+                                <a href="#">长袖T恤</a>
+                                <a href="#">运动短T</a>
+                                <a href="#">休闲裤</a>
+                                <a href="#">POLO衫</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">运动鞋</a></h4>
+                                <a href="#" title="跑步鞋">跑步鞋</a>
+                                <a href="#">篮球鞋</a>
+                                <a href="#">复古鞋</a>
+                                <a href="#">休闲鞋</a>
+                                <a href="#">帆布鞋</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">健身运动服</a></h4>
+                                <a href="#">瑜伽服</a>
+                                <a href="#">女士泳装</a>
+                                <a href="#">男士泳装</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">户外鞋</a></h4>
+                                <a href="#">徒步鞋</a>
+                                <a href="#">休闲鞋</a>
+                                <a href="#">登山鞋</a>
+                                <a href="#">越野跑鞋</a>
+                                <a href="#">溯溪鞋</a>>
+                            </div>
+                            <div>
+                                <h4><a href="#"> 户外休闲装</a></h4>
+                                <a href="#">运动裤</a>
+                                <a href="#">冲锋衣</a>
+                                <a href="#">户外短袖</a>
+                                <a href="#">外套/夹克</a>
+                                <a href="#">长袖T恤</a>
+                                <a href="#"> 皮肤衣</a>
+                            </div>
+                            <div>
+                                <h4><a href="#"> 户外专业服</a></h4>
+                                <a href="#">冲锋衣</a>
+                                <a href="#">抓绒衣</a>
+                                <a href="#">冲锋裤</a>
+                                <a href="#">速干裤</a>
+                            </div>
+                            <div>
+                                <h4><a href="#"> 运动户外装备</a></h4>
+                                <a href="#">运动背包</a>
+                                <a href="#">户外背包</a>
+                                <a href="#">运动配件</a>
+                                <a href="#">户外装备</a>
+                            </div>
+                        </div>
+                        <div class="nav-sec2">
+                            <h4>品牌</h4>
+                            <div>
+                                <a href="#">New Balance</a>
+                                <a href="#">阿迪达斯</a>
+                                <a href="#">耐克</a>
+                                <a href="#">匡威</a>
+                                <a href="#">彪马</a>
+                                <a href="#">万斯</a>
+                                <a href="#">鬼冢虎</a>
+                                <a href="#">乐卡克</a>
+                                <a href="#">斯凯奇</a>
+                                <a href="#">海泰客</a>
+                                <a href="#">狼爪</a>
+                                <a href="#">RAX瑞行</a>
+                                <a href="#">DC</a>
+                                <a href="#">锐步</a>
+                                <a href="#">李宁</a>
+                                <a href="#">婴童阿迪达斯</a>
+                                <a href="#">莎帷</a>
+                                <a href="#">沐琅</a>
+                                <a href="#">PONY&爱世克斯</a>
+                                <a href="#">阿雷登&路伊梵</a>
+                                <a href="#">圣大保罗</a>
+                                <a href="#">颂拓</a>
+                                <a href="#">肯拓普骆驼</a>
+                                <a href="#">婴童耐克</a>
+                                <a href="#">哈瓦那</a>
+                                <a href="#">MVP BOY</a>
+                                <a href="#">天弗兰</a>
+                                <a href="#">天伦天</a>
+                                <a href="#">北路</a>
+                                <a href="#">探拓</a>
+                                <a href="#">杜戛地</a>
+                                <a href="#">玩觅</a>
+                                <a href="#">AC米兰</a>
+                                <a href="#">迈途</a>
+                            </div>
+                        </div>
+                    </dd>
+                    <dt>
+                    <div>
+                        <a href="#"><em class="img8"></em>配饰</a><i class="line2" >|</i><a href="">黄金饰品</a>
+                    </div>
+                    </dt>
+                    <dd class="nav-first ">
+                        <div class="nav-sec1">
+                            <div>
+                                <h4><a href="#">最新热卖</a></h4>
+                                <a href="#">银饰</a>
+                                <a href="#">戒指</a>
+                                <a href="#">黄金吊坠</a>
+                                <a href="#">潮流饰品</a>
+                                <a href="#">胸针</a>
+                                <a href="#">晴雨伞</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">配饰</a></h4>
+                                <a href="#" title="太阳镜">太阳镜</a>
+                                <a href="#">眼镜框</a>
+                                <a href="#">女丝巾</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">品质手表</a></h4>
+                                <a href="#">瑞士表</a>
+                                <a href="#">机械表</a>
+                                <a href="#">放水表</a>
+                                <a href="#">石英表</a>
+                                <a href="#">电子表</a>
+                                <a href="#">女士手表</a>
+                                <a href="#">男士手表</a>
+                                <a href="#">情侣手表</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">珠宝</a></h4>
+                                <a href="#">珍珠吊坠</a>
+                                <a href="#">黄金</a>
+                                <a href="#">彩宝</a>
+                                <a href="#">铂金</a>
+                                <a href="#">K金</a>
+                                <a href="#">琥珀蜜蜡</a>
+                                <a href="#">翡翠玉石</a>
+                                <a href="#">钻石</a>
+                            </div>
+                            <div>
+                                <h4><a href="#"> 精选饰品</a></h4>
+                                <a href="#">手镯/手链</a>
+                                <a href="#">耳环</a>
+                                <a href="#">发饰</a>
+                                <a href="#">项链</a>
+                                <a href="#">银饰</a>
+                                <a href="#"> 血珀</a>
+                                <a href="#"> 碧玺手链</a>
+                                <a href="#"> 菩提</a>
+                                <a href="#"> 戒指/指环</a>
+                                <a href="#"> 水晶</a>
+                                <a href="#"> 佛珠</a>
+                            </div>
+                        </div>
+                        <div class="nav-sec2">
+                            <h4>品牌</h4>
+                            <div>
+                                <a href="#">米莱</a>
+                                <a href="#">Folli Follie</a>
+                                <a href="#">周大福</a>
+                                <a href="#">米润</a>
+                                <a href="#">潮宏基</a>
+                                <a href="#">卡西欧</a>
+                                <a href="#">佐卡伊</a>
+                                <a href="#">老庙黄金</a>
+                                <a href="#">宝庆银楼</a>
+                                <a href="#">FILA</a>
+                                <a href="#">佐奈美</a>
+                                <a href="#">翠云间</a>
+                                <a href="#">颜韵</a>
+                                <a href="#">玺之语</a>
+                                <a href="#">李纳斯</a>
+                                <a href="#">珍珠皇后</a>
+                                <a href="#">珍爵珠宝</a>
+                                <a href="#">润德典藏</a>
+                                <a href="#">朱润首饰</a>
+                                <a href="#">石玥珠宝</a>
+                                <a href="#">Simida</a>
+                                <a href="#">爱華尚</a>
+                                <a href="#">春生木缘</a>
+                                <a href="#">上海故事</a>
+                                <a href="#">艾尔迪</a>
+                                <a href="#">Inmix</a>
+                                <a href="#">花珠</a>
+                                <a href="#">ELLE</a>
+                                <a href="#">景大福</a>
+                                <a href="#">昊天琥珀</a>
+                                <a href="#">聚利时</a>
+                            </div>
+                        </div>
+                    </dd>
+                    <dt>
+                    <div>
+                        <a href="#"><em class="img9"></em>婴童</a><i class="line2">|</i><a href="">母婴</a>
+                    </div>
+                    </dt>
+                    <dd class="nav-first ">
+                        <div class="nav-sec1">
+                            <div>
+                                <h4><a href="#">本周推荐</a></h4>
+                                <a href="#">铃铛猪 四折封顶</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">女童装</a></h4>
+                                <a href="#" title="羽绒服">羽绒服</a>
+                                <a href="#">外套</a>
+                                <a href="#">棉服</a>
+                                <a href="#">毛衣</a>
+                                <a href="#">长袖T恤</a>
+                                <a href="#">内衣</a>
+                                <a href="#">礼裙&裙装</a>
+                                <a href="#">打底裤</a>
+                                <a href="#">休闲裤</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">男童装</a></h4>
+                                <a href="#">羽绒服</a>
+                                <a href="#">卫衣&绒衫</a>
+                                <a href="#">长袖T恤</a>
+                                <a href="#">毛衣</a>
+                                <a href="#">内衣</a>
+                                <a href="#">棉服</a>
+                                <a href="#">裙装</a>
+                                <a href="#">外套</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">孕产幼婴</a></h4>
+                                <a href="#">爬服</a>
+                                <a href="#">婴幼儿上衣</a>
+                                <a href="#">婴幼儿裤子</a>
+                                <a href="#">婴儿礼盒</a>
+                                <a href="#">套装</a>
+                                <a href="#">学步鞋</a>
+                                <a href="#">孕产用品</a>
+                                <a href="#">孕妈装</a>
+                                <a href="#">纸尿裤</a>
+                            </div>
+                            <div>
+                                <h4><a href="#"> 童靴</a></h4>
+                                <a href="#">雪地靴</a>
+                                <a href="#">靴子</a>
+                                <a href="#">男童运动鞋</a>
+                                <a href="#">男帆布鞋</a>
+                                <a href="#">男棉鞋</a>
+                                <a href="#"> 女运动鞋</a>
+                                <a href="#"> 碧玺手链</a>
+                                <a href="#"> 女棉鞋</a>
+                                <a href="#"> 女帆布鞋</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">用品</a></h4>
+                                <a href="#">喂养用品</a>
+                                <a href="#">益智玩具</a>
+                                <a href="#">洗护用品</a>
+                                <a href="#">童车</a>
+                                <a href="#">安全座椅</a>
+                            </div>
+                        </div>
+                        <div class="nav-sec2">
+                            <h4>品牌</h4>
+                            <div>
+                                <a href="#">戴维贝拉</a>
+                                <a href="#">贝贝怡</a>
+                                <a href="#">偶飞</a>
+                                <a href="#">馨颂</a>
+                                <a href="#">秀扬</a>
+                                <a href="#">咔路比</a>
+                                <a href="#">卡帕KIDS</a>
+                                <a href="#">丑丑婴幼</a>
+                                <a href="#">子初</a>
+                                <a href="#">大黄蜂</a>
+                                <a href="#">安杰娜伯比</a>
+                                <a href="#">派克兰迪</a>
+                                <a href="#">巴布豆</a>
+                                <a href="#">花王</a>
+                                <a href="#">百丽</a>
+                                <a href="#">迪士尼</a>
+                                <a href="#">五羊</a>
+                                <a href="#">十月妈咪</a>
+                                <a href="#">瓢虫之家</a>
+                                <a href="#">Anne Geddes</a>
+                                <a href="#">费雪</a>
+                                <a href="#">冬己</a>
+                                <a href="#">苏黎世家</a>
+                                <a href="#">淘帝</a>
+                                <a href="#">亿婴儿</a>
+                                <a href="#">帕菲帕贝</a>
+                                <a href="#">贝吻</a>
+                                <a href="#">卡丁</a>
+                                <a href="#">波亚米特</a>
+                                <a href="#">泰迪珍藏</a>
+                            </div>
+                        </div>
+                    </dd>
+                    <dt>
+                    <div>
+                        <a href="#"><em class="img10"></em>内衣</a><i class="line2">|</i><a href="">舒适内衣</a>
+                    </div>
+                    </dt>
+                    <dd class="nav-first ">
+                        <div class="nav-sec1">
+                            <div>
+                                <h4><a href="#">塑身文胸</a></h4>
+                                <a href="#">聚拢文胸</a>
+                                <a href="#">无痕文胸</a>
+                                <a href="#">无钢圈文胸</a>
+                                <a href="#">少女文胸</a>
+                                <a href="#">塑身连体衣</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">睡衣/家居服</a></h4>
+                                <a href="#" title="秋款家居服">秋款家居服</a>
+                                <a href="#">女士家居服</a>
+                                <a href="#">男士家居服</a>
+                                <a href="#">睡裙</a>
+                                <a href="#">情趣内衣</a>
+                                <a href="#">家居服套装</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">保暖内衣</a></h4>
+                                <a href="#">女士保暖</a>
+                                <a href="#">男士保暖</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">底裤</a></h4>
+                                <a href="#">女士底裤</a>
+                                <a href="#">男士底裤</a>
+                            </div>
+                            <div>
+                                <h4><a href="#"> 背心/吊带/T恤</a></h4>
+                                <a href="#">女士吊带/背心</a>
+                                <a href="#">男士背心/T恤</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">袜品</a></h4>
+                                <a href="#">丝袜</a>
+                                <a href="#">短袜</a>
+                            </div>
+                            <div>
+                                <h4><a href="#">运动内衣</a></h4>
+                            </div>
+                        </div>
+                        <div class="nav-sec2">
+                            <h4>品牌</h4>
+                            <div>
+                                <a href="#">爱慕</a>
+                                <a href="#">顶瓜瓜</a>
+                                <a href="#">夏娃的诱惑</a>
+                                <a href="#">红豆</a>
+                                <a href="#">尼特名</a>
+                                <a href="#">康妮雅</a>
+                                <a href="#">缘分</a>
+                                <a href="#">诗丽妃</a>
+                                <a href="#">优黛儿</a>
+                                <a href="#">北极绒</a>
+                                <a href="#">棉花共和国</a>
+                                <a href="#">安缇芬</a>
+                                <a href="#">007 JAMESBOND</a>
+                                <a href="#">仙子宜岱</a>
+                                <a href="#">U.S. POLO ASSN.</a>
+                                <a href="#">爱美丽</a>
+                                <a href="#">猫人裤袜</a>
+                                <a href="#">圣大保罗</a>
+                                <a href="#">俞兆林内衣</a>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+            </li>
+            <li><a href="#">银泰百货</a></li>
+            <li><a href="#">名品馆</a></li>
+            <li><a href="#">浪淘馆</a></li>
+            <div class="clearfix"></div>
+        </ul>
+    </nav>
+</header>
+<!--焦点图-->
+<div class="banner-box">
+    <ul class="banner-pic">
+        <li><a href="#"><img src="img/focus%20(1).jpg" width="100%" height="470px"/></a></li>
+        <li><a href="#"><img src="img/focus%20(2).jpg" width="100%" height="470px"/></a></li>
+        <li><a href="#"><img src="img/focus%20(3).jpg" width="100%" height="470px"/></a></li>
+        <li><a href=""><img src="img/focus%20(4).jpg" width="100%" height="470px"/></a></li>
+        <li><a href="#"><img src="img/focus%20(5).jpg" width="100%" height="470px"/></a></li>
+    </ul>
+    <ul class="banner-style">
+        <li class="on-banner"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div class="banner-left">
+        <a href="#">
+            <img src="img/banner-left.jpg">
+        </a>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<!--超值特卖-->
+<div class="wrap brank-content">
+    <div class="left brank-content-left">
+        <ul class="eva-switchable">
+            <li class="eva-switchable-active">
+                <a href="#">超值特卖</a>
+                <span></span>
+            </li>
+            <li class="#">
+                <a href="#">爆款好货</a>
+                <span></span>
+            </li>
+            <li class="#">
+                <a href="#">品牌活动</a>
+                <span></span>
+            </li>
+            <div class="clearfix"></div>
+        </ul>
+        <div id="showPic">
+            <div class="brank-list on-border" style="display: block">
+                <div>
+                    <div class="border-top"></div>
+                    <div class="border-right"></div>
+                    <div class="border-bottom"></div>
+                    <div class="border-left"></div>
+                    <div class="brank-list-content">
+                        <a href="#"><img src="img/3ac70f87-a88f-43a3-9595-a8c0030681af.jpg" height="258px"></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="border-top"></div>
+                    <div class="border-right"></div>
+                    <div class="border-bottom"></div>
+                    <div class="border-left"></div>
+                    <div class="brank-list-content">
+                        <a href="#"><img src="img/a152c623-5987-480d-aaee-46bf1a531fb2.jpg" height="258px"></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="border-top"></div>
+                    <div class="border-right"></div>
+                    <div class="border-bottom"></div>
+                    <div class="border-left"></div>
+                    <div class="brank-list-content">
+                        <a href="#"><img src="img/b7bfe67a-9920-4485-9071-32dd1f737562.jpg" height="260px"></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="border-top"></div>
+                    <div class="border-right"></div>
+                    <div class="border-bottom"></div>
+                    <div class="border-left"></div>
+                    <div>
+                        <a href="#"><img src="img/16580185-6ef6-47e9-a21f-542e05ff2c55.jpg"></a>
+                    </div>
+                </div>
+                <div class="clearfix" style="height: 0px;border: none"></div>
+            </div>
+            <div class="brank-list on-border" style="display: none">
+                <div>
+                    <div class="border-top"></div>
+                    <div class="border-right"></div>
+                    <div class="border-bottom"></div>
+                    <div class="border-left"></div>
+                    <div class="list-sec-content">
+                        <a href="#"><img src="img/25224.jpg"></a>
+                        <p class="text1">
+                            <a>
+                                【自营】FERRAGAMO菲拉格慕黑麂皮材质侧拉链可翻边设计女士厚底中筒靴,B版,
+                            </a>
+                        </p>
+                        <p class="text1">
+                            <strong>
+                                银泰价：￥3750
+                            </strong>
+                            <span>
+                                参考价：￥5000
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="border-top"></div>
+                    <div class="border-right"></div>
+                    <div class="border-bottom"></div>
+                    <div class="border-left"></div>
+                    <div class="list-sec-content">
+                        <a href="#"><img src="img/yintai_2b4a4062-c723-430f-ac4c-da19d374f380.jpg"></a>
+                        <p class="text1">
+                            <a>
+                                glm针织衫毛衣2016秋装新款男士圆领休闲撞色格子套头毛衫韩版潮
+                            </a>
+                        </p>
+                        <p class="text1">
+                            <strong>
+                                银泰价：￥199
+                            </strong>
+                            <span>
+                                参考价：￥429
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="border-top"></div>
+                    <div class="border-right"></div>
+                    <div class="border-bottom"></div>
+                    <div class="border-left"></div>
+                    <div class="list-sec-content">
+                        <a href="#"><img src="img/yintai_922f10c4-b2fe-4670-b7bc-da43892e9ff7.jpg"></a>
+                        <p class="text1">
+                            <a>
+                                漂亮百合 淡水珍珠耳钉6mm
+                            </a>
+                        </p>
+                        <p class="text1">
+                            <strong>
+                                银泰价：￥49
+                            </strong>
+                            <span>
+                                参考价：￥199
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="border-top"></div>
+                    <div class="border-right"></div>
+                    <div class="border-bottom"></div>
+                    <div class="border-left"></div>
+                    <div class="list-sec-content">
+                        <a href="#"><img src="img/yintai_b4c1fdc6-4615-45ab-b72d-bc5b536042d3.jpg"></a>
+                        <p class="text1">
+                            <a>
+                                TARANIS 泰兰尼斯 冬季儿童运动鞋轻便跑鞋33608
+                            </a>
+                        </p>
+                        <p class="text1">
+                            <strong>
+                                银泰价：￥199
+                            </strong>
+                            <span>
+                                参考价：￥688
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="clearfix" style="border: none; height: 0px;"></div>
+            </div>
+            <div class="brank-list on-border" style="display: none">
+                <div>
+                    <div class="border-top"></div>
+                    <div class="border-right"></div>
+                    <div class="border-bottom"></div>
+                    <div class="border-left"></div>
+                    <div class="brank-list-content">
+                        <a href="#"><img src="img/e392f3a3-8d6f-48c0-8e62-aa644fca1e9c.jpg" height="258px"></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="border-top"></div>
+                    <div class="border-right"></div>
+                    <div class="border-bottom"></div>
+                    <div class="border-left"></div>
+                    <div class="brank-list-content">
+                        <a href="#"><img src="img/058bef79-7cb5-44f6-9eeb-f6cb4bef5a12.jpg" height="258px"></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="border-top"></div>
+                    <div class="border-right"></div>
+                    <div class="border-bottom"></div>
+                    <div class="border-left"></div>
+                    <div class="brank-list-content">
+                        <a href="#"><img src="img/77da565e-0378-4383-b42b-228d8c64c3f5.jpg" height="260px"></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="border-top"></div>
+                    <div class="border-right"></div>
+                    <div class="border-bottom"></div>
+                    <div class="border-left"></div>
+                    <div>
+                        <a href="#"><img src="img/3581bd27-71bd-4fc1-82f3-da31d6c8394a.jpg"></a>
+                    </div>
+                </div>
+                <div class="clearfix" style="height: 0px;border: none"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        </div>
+    <div class="right pic-right over">
+        <a href="#">
+            <img src="img/2636a52b-3156-44aa-bebf-58e5b3fff661.jpg">
+        </a>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<!--专柜同款-->
+<div class="wrap floor-zgtk">
+    <div class="floor-title">
+        <a href="#">
+            <h6>专柜同款</h6>
+        </a>
+    </div>
+    <div class="zgtk-content">
+        <div class="left over">
+            <a href="#">
+                <img src="img/306803f8-cd71-4494-a7c2-632b93883695.jpg" alt="">
+            </a>
+        </div>
+        <div class="right floor-zgtk-content">
+            <div class="tk-nav">
+                <ul>
+                    <li class="eva-switchable-active">
+                       <a href=""> 热门品牌</a>
+                        <i></i>
+                    </li>
+                    <li>
+                        <a href="">本周推荐</a>
+                        <i></i>
+                    </li>
+                </ul>
+            </div>
+            <dive id="cf">
+                <div class="panels" style="display:  block">
+                    <div class="over">
+
+                        <div class="">
+                            <a href="#"><img src="img/e5141f57-7200-4709-aba6-359337fe64cc.jpg" ></a>
+                        </div>
+                    </div>
+                    <div class="over">
+
+                        <div class="">
+                            <a href="#"><img src="img/781e92ab-1fcf-4c53-9682-5ec22f29afda.jpg" ></a>
+                        </div>
+                    </div>
+                    <div class="over">
+                        <div class="">
+                            <a href="#"><img src="img/e3f5055d-7e3a-4062-adce-376cfec88591.jpg" ></a>
+                        </div>
+                    </div>
+                    <div class="over">
+
+                        <div class="">
+                            <a href="#"><img src="img/e100c812-c284-4724-9285-d75229499f6d.jpg" ></a>
+                        </div>
+                    </div>
+                    <div class="over">
+                        <div class="">
+                            <a href="#"><img src="img/62e59494-d713-4b14-b906-e0d0124ecb81.jpg" ></a>
+                        </div>
+                    </div>
+                    <div class="over">
+                        <div class="">
+                            <a href="#"><img src="img/a38d99e0-20ff-408b-b835-26f29949ba0c.jpg" ></a>
+                        </div>
+                    </div>
+                    <div class="clearfix" style="border: none;height: 0px"></div>
+                </div>
+                <div class="panels-sec on-border" style="display: none">
+                    <div>
+                        <div class="border-top"></div>
+                        <div class="border-right"></div>
+                        <div class="border-bottom"></div>
+                        <div class="border-left"></div>
+                        <div class="list-img">
+                            <a href="#"><img src="img/yintai_ec68cdc3-864d-4213-885d-af4c81b2528c.jpg"></a>
+                        </div>
+                        <div class="panels-sec-content">
+                            <p class="xp-title">
+                                <a href="#">
+                                    LACOSTE鳄鱼休闲鞋32CAM0002
+                                </a>
+                            </p>
+                            <p class="cf">
+                                <span>￥1690</span>
+                                <span>参考价：￥1690</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="border-top"></div>
+                        <div class="border-right"></div>
+                        <div class="border-bottom"></div>
+                        <div class="border-left"></div>
+                        <div class="list-img">
+                            <a href="#"><img src="img/yintai_d3f8e446-f638-43c7-acdf-4a6de297dfb9.jpg"></a>
+                        </div>
+                        <div class="panels-sec-content">
+                            <p class="xp-title">
+                                <a href="#">
+                                    八本船宽松连帽拼接卫衣单排扣中长棉衣BBS16A0326
+                                </a>
+                            </p>
+                            <p class="cf">
+                                <span>￥209</span>
+                                <span>参考价：￥523</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="border-top"></div>
+                        <div class="border-right"></div>
+                        <div class="border-bottom"></div>
+                        <div class="border-left"></div>
+                        <div class="list-img">
+                            <a href="#"><img src="img/yintai_004d28d2-0e15-45fd-9afe-5eebb2cfa839.jpg"></a>
+                        </div>
+                        <div class="panels-sec-content">
+                            <p class="xp-title">
+                                <a href="#">
+                                    D:FUSE迪芙斯纯色短靴DF64117064
+                                </a>
+                            </p>
+                            <p class="cf">
+                                <span>￥699</span>
+                                <span>参考价：￥1699</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="border-top"></div>
+                        <div class="border-right"></div>
+                        <div class="border-bottom"></div>
+                        <div class="border-left"></div>
+                        <div class="list-img">
+                            <a href="#"><img src="img/yintai_6165f6f3-3e44-4a34-98e3-9cf3fb6602fd.jpg"></a>
+                        </div>
+                        <div class="panels-sec-content">
+                            <p class="xp-title">
+                                <a href="#">
+                                    TARANIS 泰兰尼斯宝宝学步鞋TAWD23203
+                                </a>
+                            </p>
+                            <p class="cf">
+                                <span>￥169</span>
+                                <span>参考价：￥398</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="border-top"></div>
+                        <div class="border-right"></div>
+                        <div class="border-bottom"></div>
+                        <div class="border-left"></div>
+                        <div class="list-img">
+                            <a href="#"><img src="img/yintai_a3459a00-e5f5-4518-8d55-4d857f1d097b.jpg"></a>
+                        </div>
+                        <div class="panels-sec-content">
+                            <p class="xp-title">
+                                <a href="#">
+                                    LOFTSHINE珞炫2016冬喇叭袖纯色长羽绒36502515
+                                </a>
+                            </p>
+                            <p class="cf">
+                                <span>￥1246</span>
+                                <span>参考价：￥1780</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="border-top"></div>
+                        <div class="border-right"></div>
+                        <div class="border-bottom"></div>
+                        <div class="border-left"></div>
+                        <div class="list-img">
+                            <a href="#"><img src="img/yintai_b51bf4b7-2362-4eda-9f9c-6f4ef52fd3f3.jpg"></a>
+                        </div>
+                        <div class="panels-sec-content">
+                            <p class="xp-title">
+                                <a href="#">
+                                    HIPANDA男外套 0163431166【仓库搬迁延迟发货】
+                                </a>
+                            </p>
+                            <p class="cf">
+                                <span>￥1280</span>
+                                <span>参考价：￥1480</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="border-top"></div>
+                        <div class="border-right"></div>
+                        <div class="border-bottom"></div>
+                        <div class="border-left"></div>
+                        <div class="list-img">
+                            <a href="#"><img src="img/10032711983_1.jpg"></a>
+                        </div>
+                        <div class="panels-sec-content">
+                            <p class="xp-title">
+                                <a href="#">
+                                    ESTEE LAUDER雅诗兰黛肌透修护精华露50mlYF4E01
+                                </a>
+                            </p>
+                            <p class="cf">
+                                <span>￥850</span>
+                                <span>参考价：￥850</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="border-top"></div>
+                        <div class="border-right"></div>
+                        <div class="border-bottom"></div>
+                        <div class="border-left"></div>
+                        <div class="list-img">
+                            <a href="#"><img src="img/10034614888_1.jpg"></a>
+                        </div>
+                        <div class="panels-sec-content">
+                            <p class="xp-title">
+                                <a href="#">
+                                    L'OCCITANE欧舒丹润手霜30ml六支装3253581000002
+                                </a>
+                            </p>
+                            <p class="cf">
+                                <span>￥510</span>
+                                <span>参考价：￥510</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="clearfix" style="border: none;height: 0px"></div>
+                </div>
+            </dive>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!--时尚名品-->
+<div class="wrap" id="ssmp">
+    <div  class="brank-box"><a href="#" class="brank"></a></div>
+    <div class="brank-bot">
+        <div>
+        <div class="brank-left left">
+        <table class="brank-tab" cellspacing="5">
+            <tr>
+                <td><a href="">针织衫</a></td>
+                <td><a href="">外套</a></td>
+                <td><a href="">裙装</a></td>
+            </tr>
+            <tr>
+                <td><a href="">围巾</a></td>
+                <td><a href="">腰带</a></td>
+                <td><a href="">女鞋</a></td>
+            </tr>
+            <tr>
+                <td><a href="">女包</a></td>
+                <td><a href="">男包</a></td>
+                <td><a href="">钱包</a></td>
+            </tr>
+            <tr>
+                <td><a href="">男鞋</a></td>
+                <td><a href="">衬衫</a></td>
+                <td><a href="">双肩包</a></td>
+            </tr>
+         </table>
+            <div class="brank-img-box"><img src="img/brank1_03.jpg"></div>
+         </div>
+        </div>
+        <div class="brank-center left over" style="width: 390px">
+            <ul class="silde">
+                <li><a href=""><img src="img/e9d82b54-45f5-4d20-8d8d-cb527c7d7f00.jpg" width="390px" height="370px"/></a></li>
+                <li><a href=""><img src="img/9ea08d65-163c-4e69-a85f-bee5bc158031.jpg" width="390px" height="370px"/></a></li>
+            </ul>
+            <ul class="silde-trigger">
+                <li class="on-trigger"></li>
+                <li></li>
+            </ul>
+            <a href="javascript:void (0)" class="eva-prev">prev</a>
+            <a href="javascript:void (0)" class="eva-next">next</a>
+        </div>
+        <div class="left brank-right on-border" id="on-border">
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content"><a href=""><img src="img/shishang_03.jpg"></a></div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/shishang_05.jpg"></a>
+                </div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/shishang_09.jpg"></a>
+                </div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+               <div class="content">
+                   <a href=""><img src="img/shishang_10.jpg"></a>
+               </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+</div>
+<!--潮流女装-->
+<div class="wrap" id="clnz">
+    <div  class="brank-box"><a href="#" class="brank clnz"></a></div>
+    <div class="brank-bot">
+        <div>
+            <div class="brank-left left">
+                <table class="brank-tab" cellspacing="5">
+                    <tr>
+                        <td><a href="">羽绒服</a></td>
+                        <td><a href="">棉服</a></td>
+                        <td><a href="">大衣</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">针织衫</a></td>
+                        <td><a href="">卫衣</a></td>
+                        <td><a href="">风衣</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">连衣裙</a></td>
+                        <td><a href="">休闲裤</a></td>
+                        <td><a href="">半身裙</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">打底裤</a></td>
+                        <td><a href="">T恤</a></td>
+                        <td><a href="">牛仔裤</a></td>
+                    </tr>
+                </table>
+                <div class="brank-img-box"><img src="img/brank1_03.jpg"></div>
+            </div>
+        </div>
+        <div class="brank-center left over">
+            <a href=""><img src="img/694719ce-7573-4737-8317-e84d9ce9bbca.jpg" width="390px" height="370px"/></a>
+        </div>
+        <div class="left brank-right on-border" >
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content"><a href=""><img src="img/772fe24f-2d2a-491f-9dda-7c4fc2d14da8.jpg"></a></div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/470da178-7823-41af-8654-e21ef84b1b9d.jpg"></a>
+                </div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/a705d1b1-6839-4af2-a1b9-686e391fd514.jpg"></a>
+                </div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/0194f7d0-01f0-4d31-9c0c-d3a1e88e880e.jpg"></a>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!--精品男装-->
+<div class="wrap" id="jpnz">
+    <div  class="brank-box"><a href="#" class="brank jpnz"></a></div>
+    <div class="brank-bot">
+        <div>
+            <div class="brank-left left">
+                <table class="brank-tab" cellspacing="5">
+                    <tr>
+                        <td><a href="">长袖衬衫</a></td>
+                        <td><a href="">长袖T恤</a></td>
+                        <td><a href="">羽绒服</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">卫衣</a></td>
+                        <td><a href="">针织衫</a></td>
+                        <td><a href="">牛仔</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">夹克/外套</a></td>
+                        <td><a href="">牛仔裤</a></td>
+                        <td><a href="">休闲裤</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">美国马球</a></td>
+                        <td><a href="">vishow</a></td>
+                        <td><a href="">俞兆林</a></td>
+                    </tr>
+                </table>
+                <div class="brank-img-box"><img src="img/brank1_03.jpg"></div>
+            </div>
+        </div>
+        <div class="brank-center left over">
+            <a href=""><img src="img/08e8a4d6-e29e-407a-ba33-c9fd6ea3c140.jpg" width="390px" height="370px"/></a>
+        </div>
+        <div class="left brank-right on-border" >
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content"><a href=""><img src="img/ac58be01-9f45-4cfd-ac1b-267b0185895b.jpg"></a></div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/f28b4622-e2e1-4298-b8c0-a7be30d9eadd.jpg"></a>
+                </div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/0794502e-8acc-4126-bae3-06f0450bd848.jpg"></a>
+                </div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/f27d32d4-d8a1-449d-9b0d-32e4321c6d55.jpg"></a>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!--时尚鞋靴-->
+<div class="wrap" id="ssxx">
+    <div  class="brank-box"><a href="#" class="brank ssxx"></a></div>
+    <div class="brank-bot">
+        <div>
+            <div class="brank-left left">
+                <table class="brank-tab" cellspacing="5">
+                    <tr>
+                        <td><a href="">裸靴</a></td>
+                        <td><a href="">长靴</a></td>
+                        <td><a href="">乐福鞋</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">尖头鞋</a></td>
+                        <td><a href="">内增高</a></td>
+                        <td><a href="">平底鞋</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">休闲鞋</a></td>
+                        <td><a href="">高跟鞋</a></td>
+                        <td><a href="">粗跟鞋</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">职业范</a></td>
+                        <td><a href="">商务鞋</a></td>
+                        <td><a href="">秋冬新款</a></td>
+                    </tr>
+                </table>
+                <div class="brank-img-box"><img src="img/brank1_03.jpg"></div>
+            </div>
+        </div>
+        <div class="brank-center left over" style="width: 390px">
+            <ul class="silde">
+                <li><a href=""><img src="img/266fd554-32ef-4ad0-b5f7-f0dffa5ffeb0.jpg" width="390px" height="370px"/></a></li>
+                <li><a href=""><img src="img/77952a00-f063-470e-91e5-c2ebe5b56c68.jpg" width="390px" height="370px"/></a></li>
+            </ul>
+            <ul class="silde-trigger">
+                <li class="on-trigger"></li>
+                <li></li>
+            </ul>
+            <a href="javascript:void (0)" class="eva-prev">prev</a>
+            <a href="javascript:void (0)" class="eva-next">next</a>
+        </div>
+        <div class="left brank-right on-border">
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content"><a href=""><img src="img/85199bed-adf7-42fe-9f2c-9e3793b61f4f.jpg"></a></div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/dd5ce8cc-b2c1-4f0a-b655-f3a101e6c952.jpg"></a>
+                </div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/1e36ec82-70df-4076-8b34-9da334dc97a4.jpg"></a>
+                </div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/ae7690dc-6275-4eda-bcf2-2b87cf508dd1.jpg"></a>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!--潮流箱包-->
+<div class="wrap" id="clxb">
+    <div  class="brank-box"><a href="#" class="brank clxb"></a></div>
+    <div class="brank-bot">
+        <div>
+            <div class="brank-left left">
+                <table class="brank-tab" cellspacing="5">
+                    <tr>
+                        <td><a href="">女士单肩</a></td>
+                        <td><a href="">女士斜跨</a></td>
+                        <td><a href="">女士双肩</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">女士钱包</a></td>
+                        <td><a href="">女士多种</a></td>
+                        <td><a href="">女士手提</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">男士单肩</a></td>
+                        <td><a href="">男士手提</a></td>
+                        <td><a href="">男士钱包</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">男士腰带</a></td>
+                        <td><a href="">旅行双肩</a></td>
+                        <td><a href="">旅行箱</a></td>
+                    </tr>
+                </table>
+                <div class="brank-img-box"><img src="img/brank1_03.jpg"></div>
+            </div>
+        </div>
+        <div class="brank-center left over" style="width: 390px">
+            <ul class="silde">
+                <li><a href=""><img src="img/8083486d-d8a6-42d3-a822-99f499923eef.jpg" width="390px" height="370px"/></a></li>
+                <li><a href=""><img src="img/9efc1687-8b0c-4aed-91f4-9c7cd7719cc8.jpg" width="390px" height="370px"/></a></li>
+            </ul>
+            <ul class="silde-trigger">
+                <li class="on-trigger"></li>
+                <li></li>
+            </ul>
+            <a href="javascript:void (0)" class="eva-prev">prev</a>
+            <a href="javascript:void (0)" class="eva-next">next</a>
+        </div>
+        <div class="left brank-right on-border">
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content"><a href=""><img src="img/e9e06d07-391b-4cd4-95c1-2f5c38a42f75.jpg"></a></div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/36ae3482-857a-4005-bf3b-991f4ee8c84a.jpg"></a>
+                </div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/14da5000-7097-4a7a-a34e-a6731bd64493.jpg"></a>
+                </div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/3bb68c53-7ab1-4bec-a943-1834207776eb.jpg"></a>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!--美容护肤-->
+<div class="wrap" id="mrhf">
+    <div  class="brank-box"><a href="#" class="brank mrhf"></a></div>
+    <div class="brank-bot">
+        <div>
+            <div class="brank-left left">
+                <table class="brank-tab" cellspacing="5">
+                    <tr>
+                        <td><a href="">面膜</a></td>
+                        <td><a href="">护肤套装</a></td>
+                        <td><a href="">乳液</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">精华</a></td>
+                        <td><a href="">爽肤水</a></td>
+                        <td><a href="">洁面</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">眼霜</a></td>
+                        <td><a href="">身体护理</a></td>
+                        <td><a href="">BB霜</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">男士护理</a></td>
+                        <td><a href="">女士香水</a></td>
+                        <td><a href="">唇膏口红</a></td>
+                    </tr>
+                </table>
+                <div class="brank-img-box"><img src="img/brank1_03.jpg"></div>
+            </div>
+        </div>
+        <div class="brank-center left over" style="width: 390px">
+            <ul class="silde">
+                <li><a href=""><img src="img/32c878cd-6f44-43e3-b208-3e26291f01b5.jpg" width="390px" height="370px"/></a></li>
+                <li><a href=""><img src="img/00ee3ca8-5c4b-4a26-bbce-6e86e8a2981d.jpg" width="390px" height="370px"/></a></li>
+            </ul>
+            <ul class="silde-trigger">
+                <li class="on-trigger"></li>
+                <li></li>
+            </ul>
+            <a href="javascript:void (0)" class="eva-prev">prev</a>
+            <a href="javascript:void (0)" class="eva-next">next</a>
+        </div>
+        <div class="left brank-right on-border">
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content"><a href=""><img src="img/675c8b27-d867-48c1-81c4-c8a004a8dca6.jpg"></a></div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/c7c4aa65-42c5-464d-88be-8055e9364e70.jpg"></a>
+                </div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/49b78265-34f5-4d80-aea8-45a11d612245.jpg"></a>
+                </div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/d1eaf527-bcd8-40f1-992d-87e8d274c573.jpg"></a>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!--运动户外-->
+<div class="wrap" id="ydhw">
+    <div  class="brank-box"><a href="#" class="brank ydhw"></a></div>
+    <div class="brank-bot">
+        <div>
+            <div class="brank-left left">
+                <table class="brank-tab" cellspacing="5">
+                    <tr>
+                        <td><a href="">运动T恤</a></td>
+                        <td><a href="">POLO衫</a></td>
+                        <td><a href="">短裤</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">运动裤</a></td>
+                        <td><a href="">泳装</a></td>
+                        <td><a href="">凉鞋/拖鞋</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">复古鞋</a></td>
+                        <td><a href="">帆布鞋</a></td>
+                        <td><a href="">跑步鞋</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">篮球鞋</a></td>
+                        <td><a href="">运动箱包</a></td>
+                        <td><a href="">户外装备</a></td>
+                    </tr>
+                </table>
+                <div class="brank-img-box"><img src="img/brank1_03.jpg"></div>
+            </div>
+        </div>
+
+        <div class="brank-center left over" style="width: 390px">
+            <ul class="silde">
+                <li><a href=""><img src="img/9e7b9bba-38b3-4600-a19d-bf32f04c7067.jpg" width="390px" height="370px"/></a></li>
+                <li><a href=""><img src="img/54da89d6-3770-4263-b022-67e97aef0585.jpg" width="390px" height="370px"/></a></li>
+            </ul>
+            <ul class="silde-trigger">
+                <li class="on-trigger"></li>
+                <li></li>
+            </ul>
+            <a href="javascript:void (0)" class="eva-prev">prev</a>
+            <a href="javascript:void (0)" class="eva-next">next</a>
+        </div>
+        <div class="left brank-right on-border">
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content"><a href=""><img src="img/fce89383-7273-4831-b4d7-95e468f1a997.jpg"></a></div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/eabe36df-2c62-49d0-bfe2-001c0644e620.jpg"></a>
+                </div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/733cfae4-4c2f-48f0-b1ee-77b860e60982.jpg"></a>
+                </div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/33f0a300-30ca-48fb-bca7-87e214e465b3.jpg"></a>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!--内衣配饰-->
+<div class="wrap" id="nyps">
+    <div  class="brank-box"><a href="#" class="brank nyps"></a></div>
+    <div class="brank-bot">
+        <div>
+            <div class="brank-left left">
+                <table class="brank-tab" cellspacing="5">
+                    <tr>
+                        <td><a href="">文胸</a></td>
+                        <td><a href="">底裤</a></td>
+                        <td><a href="">家居服</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">保暖内衣</a></td>
+                        <td><a href="">塑身袜品</a></td>
+                        <td><a href="">女鞋</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">黄金</a></td>
+                        <td><a href="">翡翠玉石</a></td>
+                        <td><a href="">珍珠</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">钻石</a></td>
+                        <td><a href="">男士手表</a></td>
+                        <td><a href="">太阳镜</a></td>
+                    </tr>
+                </table>
+                <div class="brank-img-box"><img src="img/brank1_03.jpg"></div>
+            </div>
+        </div>
+        <div class="brank-center left over">
+            <a href=""><img src="img/65c2ebd6-f373-4043-af35-f64ad50bbb13.jpg" width="390px" height="370px"/></a>
+        </div>
+        <div class="left brank-right on-border">
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content"><a href=""><img src="img/d20d1dae-38d7-45b2-9a43-7df15014c127.jpg"></a></div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/716bfb61-a96d-4404-900b-e51556658440.jpg"></a>
+                </div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/a9d6bbab-756e-44e0-bc78-aba74ae2eb33.jpg"></a>
+                </div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/a75cbe1b-c5d5-43f7-9275-ec10713e4f27.jpg"></a>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!--可爱婴童-->
+<div class="wrap" id="kayt">
+    <div  class="brank-box"><a href="#" class="brank kayt"></a></div>
+    <div class="brank-bot">
+        <div>
+            <div class="brank-left left">
+                <table class="brank-tab" cellspacing="5">
+                    <tr>
+                        <td><a href="">羽绒服</a></td>
+                        <td><a href="">长袖T恤</a></td>
+                        <td><a href="">卫衣</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">风衣</a></td>
+                        <td><a href="">打底裤</a></td>
+                        <td><a href="">休闲裤</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">孕产妇</a></td>
+                        <td><a href="">运动鞋</a></td>
+                        <td><a href="">婴幼套装</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">四件套</a></td>
+                        <td><a href="">毛毯</a></td>
+                        <td><a href="">冬被</a></td>
+                    </tr>
+                </table>
+                <div class="brank-img-box"><img src="img/brank1_03.jpg"></div>
+            </div>
+        </div>
+        <div class="brank-center left over">
+            <a href=""><img src="img/5184c2a2-3ce9-45ed-b317-899c476cbd31.jpg" width="390px" height="370px"/></a>
+        </div>
+        <div class="left brank-right on-border">
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content"><a href=""><img src="img/cb8e3e0e-24ce-462e-bb65-f9054376d8f1.jpg"></a></div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/8e50c0e8-cc47-40ae-9c22-957847ec318a.jpg"></a>
+                </div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/60fbbe11-3724-4089-b9d1-1827e9474c8f.jpg"></a>
+                </div>
+            </div>
+            <div>
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+                <div class="content">
+                    <a href=""><img src="img/a9b32008-592e-4039-89b9-96b162311f04.jpg"></a>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="wrap card">
+        <div class="public-one over">
+            <a href="#"><img src="img/06e60098-7adc-438c-8a9d-2b9970851ee3.jpg"></a>
+        </div>
+        <div class="public-tow over">
+            <a href="#"><img src="img/5de0cee3-4fb4-49df-b19e-904f6b003482.jpg"></a>
+        </div>
+        <div class="over">
+            <a href="#"><img src="img/2e663a8d-c6a4-4c60-b3a6-534dd4004637.jpg"></a>
+        </div>
+    </div>
+    <div class="itips">
+        <span class="service">
+            <strong>400-119-1111</strong>
+            <i>8:00-24:00</i>
+            <b>service@yintai.com</b>
+        </span>
+        <span class="delivery">
+            <strong><i>15天</i>无忧退换货</strong>
+            <b>为你提供优质售后服务</b>
+        </span>
+        <span class="genuine">
+            <strong><i>100%</i>正品保证</strong>
+            <b>品质护航，购物无忧</b>
+        </span>
+        <span class="freight">
+            <strong><i>满199元</i>免运费</strong>
+            <b>为您提供便利物流</b>
+        </span>
+    </div>
+</div>
+<footer>
+    <p class="ilinks">
+        <a href="#">关于银泰</a>|<a href="#">帮助中心</a>|<a href="#">退换货政策</a>|<a href="#">网站地图</a>|<a href="#">代理合作</a>|<a href="#">品牌招商</a>|<a href="#">商务合作</a>|<a href="#">网站联盟</a>|<a href="#">联系我们</a>|<a href="#">加入银泰</a>|<a href="#">版权声明</a>|<a href="#">法律声明</a>
+    </p>
+    <div class="copyright">
+        <p>
+            <a href="#">浙ICP备10200233号</a><a href="#">京公网安备110105019085</a><a href="#">增值电信业务经营许可证：浙B2-20110005</a>
+        </p>
+        <p>Yintai © 2016, 银泰电子商务有限公司.</p>
+    </div>
+    <div class="all-mark">
+        <a href="#" class="m-integrity"><img src="img/yt-ntegrity.png"></a>
+        <a href="#" class="cnnic"><img src="img/cnnic.png"></a>
+        <a href="#" class="commerce"><img src="img/commerce.gif"></a>
+    </div>
+</footer>
+<div class="float-nav">
+    <a href="javascript:void(0)">时尚名品</a>
+    <a href="javascript:void(0)" >潮流女装</a>
+    <a href="javascript:void(0)" >精品男装</a>
+    <a href="javascript:void(0)" >时尚鞋靴</a>
+    <a href="javascript:void(0)">潮流箱包</a>
+    <a href="javascript:void(0)">美容护肤</a>
+    <a href="javascript:void(0)">运动户外</a>
+    <a href="javascript:void(0)">内衣配饰</a>
+    <a href="javascript:void(0)">可爱婴童</a>
+    <a href="javascript:void(0)">返回顶部</a>
+</div>
+</body>
+<script>
+    var index=0;
+    $(function(){
+      var objStr=".nav-ul";
+        $(objStr+" dt").each(function(i){
+            $(this).hover(function(){
+                var n=i+1;
+                $(this).siblings("dd").hide()
+                $($(objStr+" dd")[i]).css({"display":"flex"});
+                $(this).find("em").removeClass("img"+n).addClass("imgh"+n)
+            },function(){
+                var n=i+1;
+               // $($(objStr+" dd")[i]).hide();
+                $(this).find("em").removeClass("imgh"+n).addClass("img"+n)
+            });
+            $(objStr+" dd").on("mouseover",function(e){
+                //$(this).next().css({"display":"flex"});
+                $(document).one("mouseover",function(){
+                    $($(objStr+" dd")[i]).hide();
+                } );
+                e.stopPropagation()
+            })
+            $($(objStr+" dd")[i]).on("mouseover",function(e){
+                e.stopPropagation()
+            })
+            });
+
+    });
+    function run(){
+        $(".banner-pic li").hide()
+        $(".banner-pic li").eq(index).show();
+        $(".banner-pic li").eq(index-1).hide();
+        $(".banner-style li").removeClass("on-banner").eq(index);
+        $(".banner-style li").eq(index).addClass("on-banner")
+        index++
+        if (index>4){
+            index=0
+        }
+    }
+    var time=setInterval(run,3000);
+    function stopRun() {
+        $(".banner-style li").hover(function () {
+            index = $(this).index();
+            run();
+            clearInterval(time)
+        }, function () {
+            time = setInterval(run, 3000)
+        })
+    }
+    stopRun()
+    $(function(){
+        $(".on-border").children().hover(function() {
+            $(this).children().stop();
+            $(this).children(".border-top").css({"width":"0px","borderTop":"1px solid #666666"});
+            $(this).children(".border-top").animate({
+                "width": "100%"
+            }, 500);
+            $(this).children(".border-left").css({"height":"0px","borderLeft":"1px solid #666666"});
+            $(this).children(".border-left").animate({
+                "height": "100%"
+            }, 500);
+            $(this).children(".border-right").css({"height":"0px","borderRight":"1px solid #666666"});
+            $(this).children(".border-right").animate({
+                "height": "100%"
+            }, 500);
+            $(this).children(".border-bottom").css({"width":"0px","borderBottom":"1px solid #666666"});
+            $(this).children(".border-bottom").animate({
+                "width": "100%"
+            }, 500)
+        },function(){
+            $(this).children().stop();
+            $(this).children(".border-top").animate({
+                "width":"0px"
+            },500,function(){
+                $(this).children(".border-top").css({"width":"100%","borderBottom":"1px solid #eeeeee"})
+            });
+                $(this).children(".border-left").animate({
+                    "height":"0px"
+                },500,function(){
+                    $(this).children(".border-left").css({"height":"100%","borderLeft":"1px solid #eeeeee"})
+                });
+            $(this).children(".border-right").animate({
+                "height":"0px"
+            },500,function(){
+                $(this).children(".border-right").css({"height":"100%","borderRight":"1px solid #eeeeee"})
+            });
+            $(this).children(".border-bottom").animate({
+                "width":"0px"
+            },500,function(){
+                $(this).children(".border-bottom").css({"width":"100%","borderBottom":"1px solid #eeeeee"})
+            });
+        });
+        $(".eva-switchable li").each(function(e){
+            $(this).hover(function(){
+                $(".eva-switchable li").removeClass("eva-switchable-active");
+                $(this).addClass("eva-switchable-active");
+                $("#showPic").children().css("display","none");
+                $("#showPic").children().eq(e).css("display","block")
+            })
+        });
+        $(".tk-nav ul li").each(function(e){
+            $(this).hover(function(){
+                $(".tk-nav ul li").removeClass("eva-switchable-active");
+                $(this).addClass("eva-switchable-active");
+                $("#cf").children().css("display","none");
+                $("#cf").children().eq(e).css("display","block");
+            })
+        });
+
+    });
+    $(function(){
+        var nav=new Array;
+        var ssmp=document.getElementById("ssmp").offsetTop
+        nav.push(ssmp);
+        var clnv=document.getElementById("clnz").offsetTop;
+        nav.push(clnv);
+        var jpnz=document.getElementById("jpnz").offsetTop;
+        nav.push(jpnz);
+        var ssxx=document.getElementById("ssxx").offsetTop;
+        nav.push(ssxx);
+        var clxb=document.getElementById("clxb").offsetTop;
+        nav.push(clxb);
+        var mrhf=document.getElementById("mrhf").offsetTop;
+        nav.push(mrhf);
+        var ydhw=document.getElementById("ydhw").offsetTop;
+        nav.push(ydhw);
+        var nyps=document.getElementById("nyps").offsetTop;
+        nav.push(nyps);
+        var kayt=document.getElementById("kayt").offsetTop;
+        nav.push(kayt);
+        var lastActive=document.getElementById("kayt").offsetHeight+kayt;
+        nav.push(lastActive);
+        var a=0;
+        $(".float-nav a").each(function(e){
+            $(this).click(function(){
+                if(e<9){
+                    $(window).scrollTop(nav[e]);
+                }else {
+                    $(window).scrollTop(0)
+                }
+            });
+            $(this).hover(function(){
+                $(this).addClass("float-active")
+            },function(){
+                var b=$(window).scrollTop();
+                if(background(b)!=$(this).index()){
+                    $(this).removeClass("float-active")
+                }
+            })
+        });
+        $(window).scroll(function(){
+            var d=$(this).scrollTop();
+            if(d>ssmp){
+                $(".float-nav").css("display","block");
+                $(".float-nav a").removeClass("float-active");
+                $(".float-nav a").eq(background(d)).addClass("float-active")
+            }else {
+                $(".float-nav").css("display","none");
+
+            }
+        });
+        function background(s){
+            for (var  i=0;i<nav.length-1;i++){
+                if(s>nav[i] && s<nav[i+1]){
+                    return i
+                }
+            }
+        }
+        $(".silde-trigger li").hover(function(){
+            $(this).parents(".brank-center").removeClass("over")
+           // $(this).addClass("on-trigger")
+        },function(){
+            $(this).parents(".brank-center").addClass("over")
+            //$(this).removeClass("on-trigger")
+        })
+        $(".brank-center").hover(function(){
+            $(this).children("a").eq(0).animate({
+                "left":"0",
+            },500);
+            $(this).children("a").eq(1).animate({
+                "right":"0",
+            },500)
+        },function(){
+            $(this).children("a").eq(0).css("left","-30px");
+            $(this).children("a").eq(1).css("right","-30px")
+        })
+        $(".brank-center .eva-prev").hover(function(){
+            $(this).css("backgroundPosition","0 -60px")
+            $(this).parents(".brank-center").removeClass("over")
+        },function(){
+            $(this).css("backgroundPosition","0 0")
+            $(this).parents(".brank-center").addClass("over");
+        });
+        $(".brank-center .eva-next").hover(function(){
+            $(this).css("backgroundPosition","-30px -60px")
+            $(this).parents(".brank-center").removeClass("over")
+        },function(){
+            $(this).css("backgroundPosition","-30px 0")
+            $(this).parents(".brank-center").addClass("over");
+        });
+        var index=0;
+        $(".eva-prev").click(function(){
+            index=index-1;
+            if (index<0){index=0}
+            $(this).siblings(".silde").animate({"left":-index*390+"px"},500)
+            $(this).siblings(".silde-trigger").children().removeClass("on-trigger");
+            $(this).siblings(".silde-trigger").children().eq(index).addClass("on-trigger");
+        });
+        $(".eva-next").click(function(){
+            index=index+1;
+            if (index>1){index=1}
+            $(this).siblings(".silde").animate({"left":-index*390+"px"},500)
+            $(this).siblings(".silde-trigger").children().removeClass("on-trigger");
+            $(this).siblings(".silde-trigger").children().eq(index).addClass("on-trigger");
+        });
+        $(".silde-trigger li").click(function(){
+            index=$(this).index();
+            $(this).parent().siblings(".silde").animate({"left":-index*390+"px"},500)
+            $(this).siblings().removeClass("on-trigger");
+            $(this).addClass("on-trigger");
+        })
+    });
+</script>
+</html>

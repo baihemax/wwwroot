@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#bor{
+				background-color:whitesmoke;
+				width: 40px;
+				height: 40px;
+				position: absolute;
+				border-radius: 50%;
+			}
+			#map{
+				background: black;
+				width: 400px;
+				height: 600px;
+				position: relative;
+				margin: auto;
+			}
+			.gun{
+				width: 30px;
+				height: 20px;
+				border-radius: 10px 0px 0px 10px;
+				position: absolute;
+				right: 0px;
+			}
+			#fenshu{
+				background-color: palevioletred;
+				color: white;
+				font-family: "微软雅黑";
+				float: left;
+				width: 40px;
+				height: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="map">
+			<div id="fenshu">
+			0
+			</div>
+			<div id="bor">
+			
+			</div>
+		</div>	
+	</body>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	//角色控制
+		var boll=document.getElementById("bor");
+		var mapa=document.getElementById("map")
+		var fenshu=document.getElementById("fenshu")
+		var color=["red",
+		"palevioletred",
+		"white",
+		"lightseagreen",
+		"gold",
+		"saddlebrown",
+		"slategray ",
+		"lavender",
+		"tomato",
+		"blueviolet"]
+		boll.style.right="320px";
+		var fs=0;
+		var mip=0;
+		var tip=1;
+		function y(){
+			mip+=2;
+			boll.style.top=mip+"px";
+			if(mip>540){
+				clearInterval(set);
+				alert("你输了");
+				over();
+			}
+		}
+		function x(){
+			mip-=3;
+			boll.style.top=mip+"px";
+			if(mip>540||mip<=0){
+				clearInterval(set);
+				alert("你输了")
+				over();
+			}
+		}
+		function z(){
+			mip+=2;
+			boll.style.top=mip+"px";
+			if(mip>540){
+				clearInterval;
+				alert("你输了")
+				over();
+			}
+		}
+		var set=setInterval("z()",10);
+		onkeydown=function(){
+			if(tip==1){
+				z=x;
+				tip=0;
+				setTimeout(function(){
+				z=y;
+				tip=1;
+			},500)
+			}
+		}
+	//子弹创建
+	function zidan(){
+		var boom=document.createElement("div")
+		mapa.appendChild(boom);
+		boom.className="gun";
+		boom.style.top=Math.random()*580+"px";
+		boom.style.right="0px";
+		boom.style.background=color[parseInt(Math.random()*10)];	
+	}
+	var cj=setInterval(zidan,400);
+	//子弹移动
+	function sheji(){
+		var guns=document.getElementsByClassName("gun");
+		for(s=0;s<guns.length;s++){
+			var guiji=parseInt(guns[s].style.right);
+			guiji+=10;
+			guns[s].style.right=guiji+"px";
+			if(guiji>=380){
+				guns[s].remove();
+			}
+		}
+	}
+	var sj=setInterval(sheji,20)
+	//积分判定
+	function jifen(){
+		fs+=1;
+		fenshu.innerHTML=fs;
+		var pen=document.getElementsByClassName("gun");
+		for(p=0;p<pen.length;p++){
+			xzhou=parseInt(pen[p].style.right);
+			yzhou=parseInt(pen[p].style.top) ;
+			xx=parseInt(boll.style.right);
+			yy=parseInt(boll.style.top);
+			if(yzhou>yy&&yzhou<(yy+35)&&xzhou<=xx&&xzhou>=(xx-25)){
+				alert("你输了,你的分数是"+fs);
+				fs=0;
+				over();
+			}else if(yzhou>yy&&yzhou<(yy+35)&&(xzhou-30)<=xx&&(xzhou-30)>=(xx-25)){
+				alert("你输了,你的分数是"+fs);
+				fs=0;
+				over();
+			}else if((yzhou+20)>(yy+5)&&(yzhou+20)<(yy+35)&&xzhou<=xx&&xzhou>=(xx-25)){
+				alert("你输了,你的分数是"+fs);
+				fs=0;
+				over();
+			}else if((yzhou+20)>(yy+5)&&(yzhou+20)<(yy+35)&&(xzhou-30)<=xx&&(xzhou-30)>=(xx-25)){
+				alert("你输了,你的分数是"+fs);
+				fs=0;
+				over();
+			}
+		}
+	}
+	var jf=setInterval(jifen,1);
+	//游戏结束
+	function over(){
+		clearInterval(set);
+		clearInterval(sj);
+		clearInterval(jf);
+		clearInterval(cj);
+	}
+	</script>
+</html>

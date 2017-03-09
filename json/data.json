@@ -1,0 +1,36 @@
+{
+  "poject":[
+    { "path":"AirFlyGAME.beat1/beat.html",
+      "name":"太空大战Dev1",
+      "photo":"img/AirFly.jpg",
+      "text":"一个双人对战的小游戏，更新于2016/10/06"},
+    { "path":"http://112.74.46.96:8080/",
+      "name":"沃土社区Dev",
+      "photo":"img/wotu.jpg",
+      "text":"一个使用了Vue的前端社区，更新于2016/12/19"},
+    { "path":"http://112.74.46.96:1010/",
+      "name":"仿投之家",
+      "photo":"img/touzhijia.jpg",
+      "text":"一个仿投之家的VUE手机端页面，更新于2016/08/10"},
+    { "path":"cainiao/cainiao.html",
+      "name":"菜鸟教程",
+      "photo":"img/cainiao.jpg",
+      "text":"一个仿菜鸟网响应式布局的静态页面，更新于2016/07/01"},
+    { "path":"bord/bord.html",
+      "name":"bordDev1",
+      "photo":"img/bord.png",
+      "text":"一个仿飞行小鸟的小游戏，更新于2016/09/18"},
+    { "path":"yingtai/project.html",
+      "name":"银泰商城",
+      "photo":"img/yintai.jpg",
+      "text":"一个仿银泰商城的页面，更新于2016/07/15"}
+  ],
+  "blog":[
+    {"name":"&lt转&gtVue.js2.0从入门到放弃---入门实例（一）",
+     "path":"#",
+     "time":"2017/02/01"},
+    {"name":"&lt转&gtVue.js2.0从入门到放弃---入门实例（二）",
+      "path":"#",
+      "time":"2017/02/02"}
+  ]
+}

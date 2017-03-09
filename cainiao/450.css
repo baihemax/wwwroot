@@ -1,0 +1,21 @@
+main{
+	width: 100%;
+}
+header{
+	width: 100%;
+}
+#left{
+	width: 15%;
+}
+#right{
+	width: 97%;
+}
+.small{
+	width: 35%;
+}
+footer{
+	display: none;
+}
+#left{
+	display: none;
+}
